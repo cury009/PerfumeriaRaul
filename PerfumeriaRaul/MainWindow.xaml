@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:PerfumeriaRaul"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
+    
+    
     <StackPanel Background="white">
         <StackPanel.Resources>
             <Style TargetType="Button" BasedOn="{StaticResource menu}"/>

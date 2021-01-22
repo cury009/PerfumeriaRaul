@@ -27,18 +27,20 @@ namespace PerfumeriaRaul
         
         public ProductHandler productHandler;
 
+    
+
         public MainWindow(ProductHandler productHandler)
         {
             this.productHandler = productHandler;
         }
 
-        public MainWindow(ProductHandler productHandler)
+        public MainWindow()
         {
             InitializeComponent();
             myNavigationFrame = myFrame;
             productHandler = new ProductHandler();
             myNavigationFrame.NavigationService.Navigate(new MainPage());
-            this.productHandler = productHandler;
+            productHandler = productHandler;
         }
 
         private void Button_ClickPrincipal(object sender, RoutedEventArgs e)

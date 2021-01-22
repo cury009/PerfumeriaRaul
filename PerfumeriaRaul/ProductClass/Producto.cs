@@ -8,47 +8,40 @@ namespace PerfumeriaRaul.ProductClass
 {
     public class Producto : ICloneable
     {
-        public String referencia { set; get; }
+        public String Referencia { set; get; }
         public String Tipo { set; get; }
-        public String marca { set; get; }
+        public String Marca { set; get; }
 
-        public String articulo { set; get; }
-        public String envase { set; get; }
-        public String descripcion { set; get;s }
+        public String Articulo { set; get; }
+        public String Envase { set; get; }
+        public String Descripcion { set; get;  }
 
-        public String precio { set; get; }
-        
-        public DateTime fechaAlta { set; get; }
+        public String Precio { set; get; }
 
-        public String stock { set; get; }
+        public DateTime FechaAlta { set; get; }
+
+        public String Stock { set; get; }
 
         public Producto(string referencia, string tipo, string marca, string precio, string stock, DateTime fechaAlta)
         {
-            this.referencia = referencia;
+            this.Referencia = referencia;
             this.Tipo = tipo;
-            this.marca = marca;
-            this.precio = precio;
-            this.stock = stock;
-            this.fechaAlta = fechaAlta;
+            this.Marca = marca;
+            this.Precio = precio;
+            this.Stock = stock;
+            this.FechaAlta = fechaAlta;
         }
 
-        public Producto(string referencia, string marca, string precio, string stock, DateTime fechaAlta)
-        {
-            this.referencia = referencia;
-            this.marca = marca;
-            this.precio = precio;
-            this.stock = stock;
-            this.fechaAlta = fechaAlta;
-        }
+       
 
         public Producto(string referencia)
         {
-            this.referencia = "";
+            this.Referencia = "";
             this.Tipo = "";
-            this.marca = "";
-            this.precio = "";
-            this.stock = "";
-            this.fechaAlta = DateTime.Now;
+            this.Marca = "";
+            this.Precio = "";
+            this.Stock = "";
+            this.FechaAlta = DateTime.Now;
         }
 
         public Producto()
@@ -57,7 +50,7 @@ namespace PerfumeriaRaul.ProductClass
 
         public override string ToString()
         {
-            return referencia;
+            return Referencia;
         }
 
         public object Clone()
@@ -66,3 +59,4 @@ namespace PerfumeriaRaul.ProductClass
 
         }
     }
+}
