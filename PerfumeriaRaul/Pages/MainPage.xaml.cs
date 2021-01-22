@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PerfumeriaRaul.Pages
@@ -17,7 +18,7 @@ namespace PerfumeriaRaul.Pages
     /// <summary>
     /// Lógica de interacción para MainPage.xaml
     /// </summary>
-    public partial class MainPage : Window
+    public partial class MainPage : Page
     {
         public MainPage()
         {
