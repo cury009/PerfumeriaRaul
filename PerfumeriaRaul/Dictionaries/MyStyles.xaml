@@ -3,10 +3,8 @@
                     xmlns:local="clr-namespace:PerfumeriaRaul.Dictionaries">
 
 
-    <ImageBrush x:Key="background" ImageSource="/imagenes/perfurmeriaMercadona.png" Stretch="Fill"/>
-
-    Style TargetType="Button" x:Key="buttonStyle1">
-    <Setter Property="Width" Value="130"/>
+    <Style TargetType="Button" x:Key="menu">
+    <Setter Property="Width" Value="200"/>
     <Setter Property="Height" Value="25"/>
     <Setter Property="FontSize" Value="12"/>
     <Setter Property="FontWeight" Value="DemiBold"/>
@@ -43,4 +41,8 @@
         <Setter Property="Margin" Value="25"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>
+
+    <ImageBrush x:Key="background" ImageSource="/imagenes/perfurmeriaMercadona.png" Stretch="Fill"/>
+
+
 </ResourceDictionary>

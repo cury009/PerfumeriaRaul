@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PerfumeriaRaul.ProductClass;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,13 +16,20 @@ using System.Windows.Shapes;
 namespace PerfumeriaRaul.Pages
 {
     /// <summary>
-    /// Lógica de interacción para NewProductPage.xaml
+    /// Lógica de interacción para ConsultaProduct.xaml
     /// </summary>
-    public partial class NewProductPage : Window
+    public partial class ConsultaProduct : Window
     {
-        public NewProductPage(ProductClass.ProductHandler productHandler)
+        private ProductHandler productHandler;
+
+        public ConsultaProduct()
         {
             InitializeComponent();
+        }
+
+        public ConsultaProduct(ProductHandler productHandler)
+        {
+            this.productHandler = productHandler;
         }
     }
 }

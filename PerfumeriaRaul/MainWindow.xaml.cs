@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PerfumeriaRaul.Pages;
+using PerfumeriaRaul.ProductClass;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,47 @@ namespace PerfumeriaRaul
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+
+        public static Frame myNavigationFrame;
+        
+        public ProductHandler productHandler;
+
+        public MainWindow(ProductHandler productHandler)
+        {
+            this.productHandler = productHandler;
+        }
+
+        public MainWindow(ProductHandler productHandler)
         {
             InitializeComponent();
+            myNavigationFrame = myFrame;
+            productHandler = new ProductHandler();
+            myNavigationFrame.NavigationService.Navigate(new MainPage());
+            this.productHandler = productHandler;
         }
+
+        private void Button_ClickPrincipal(object sender, RoutedEventArgs e)
+        {
+            myNavigationFrame.NavigationService.Navigate(new MainPage());
+        }
+        private void Button_ClickNuevo(object sender, RoutedEventArgs e)
+        {
+            myNavigationFrame.NavigationService.Navigate(new NewProductPage("Nuevo producto", productHandler));
+        }
+        private void Button_ClickConsulta(object sender, RoutedEventArgs e)
+        {
+            myNavigationFrame.NavigationService.Navigate(new ConsultaProduct(productHandler));
+        }
+
+
+
+
+
+
+        private void Button_ClickSalir(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        
     }
 }

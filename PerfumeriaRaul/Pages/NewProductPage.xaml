@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PerfumeriaRaul.Pages"
         mc:Ignorable="d"
-        Title="NewProductPage" Height="450" Width="800">
-    <StackPanel Background="white">
+        Title="NewProductPage" Height="700" Width="800">
+    <StackPanel Background="white" Margin="0,0,0,-1">
         <StackPanel.Resources>
             <Style TargetType="TextBlock" BasedOn="{StaticResource textBlockStyle1}"/>
         </StackPanel.Resources>
 
-        <TextBlock x:Name="titleNewOrModify" Text="NUEVO PRODUCTO" Style="{StaticResource textBlockTitleStyle1}" RenderTransformOrigin="0.254,0.517" Margin="100,10"/>
+        <TextBlock x:Name="titleNewOrModify" Text="NUEVO PRODUCTO"   Margin="0,10,20,10" TextAlignment="Center" Width="717"/>
 
-        <Grid x:Name="productoGrid" Margin="110,10,95,0" Width="Auto" Height="264">
+        <Grid x:Name="productoGrid" Margin="110,10,95,0" Width="Auto" Height="476">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -27,21 +27,24 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
+
 
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="0" Text="referencia del producto:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Categoria:" HorizontalAlignment="Right" VerticalAlignment="Center" />
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Marca:" HorizontalAlignment="Right" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Tipo:" HorizontalAlignment="Right" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Marca:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Articulo:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
             <TextBlock Grid.Row="4" Grid.Column="0" Text="Envase:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <TextBlock Grid.Row="5" Grid.Column="0" Text="Precio:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <TextBlock Grid.Row="6" Grid.Column="0" Text="Fecha entrada:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <TextBlock Grid.Row="7" Grid.Column="0" Text="Stock:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Descripcion:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Precio" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Fecha Entrada" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Stock" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
 
             <TextBox x:Name="txt_Ref" Text="{Binding referencia}" Margin="10,5" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"/>
 
-            <ComboBox x:Name="categoryCombo" Text="{Binding Tipo}" Margin="10,5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center">
+            <ComboBox x:Name="articuloCombo" Text="{Binding articulo}" Margin="10,5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center">
                 <!-- <ComboBoxItem Content="ordenadores" IsSelected="true"/>
                 <ComboBoxItem Content="tablets"/>
                 <ComboBoxItem Content="moviles"/>
@@ -50,29 +53,20 @@
                 <ComboBoxItem Content="audio"/> -->
 
             </ComboBox>
-            <ComboBox x:Name="MarcaCombo" Text="{Binding Tipo}" Margin="10,5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center">
+            <ComboBox x:Name="tipoCombo" Text="{Binding Tipo}" Margin="10,5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"/>
 
-            </ComboBox>
-
-            <ComboBox x:Name="ArticuloCombo" Text="{Binding Tipo}" Margin="10,5" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center">
-
-            </ComboBox>
-            <ComboBox x:Name="EnvaseCombo" Text="{Binding Tipo}" Margin="10,5" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center">
-
-            </ComboBox>
-
-
-
-            <!--<TextBox x:Name="txt_Marca" Text="{Binding marca}" Margin="10,5" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"/>-->
-            <TextBox x:Name="txt_Precio" Text="{Binding precio}" Margin="10,5" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center"/>
-            <DatePicker x:Name="txt_fechaAlta" SelectedDate="{Binding fechaAlta}"  Margin="10,5" Grid.Row="6" Grid.Column="1"/>
-            <TextBox x:Name="txt_Stock" Text="{Binding stock}" Margin="10,5" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center"/>
+            <ComboBox x:Name="marcaCombo" Text="{Binding marca}" Margin="10,5" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"/>
+            <ComboBox x:Name="EnvaseCombo" Text="{Binding tipo}" Margin="10,5" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="txt_descripcion" Text="{Binding descripcion}" Margin="10,5" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="txt_Precio" Text="{Binding precio}" Margin="10,5" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center"/>
+            <DatePicker x:Name="txt_fechaAlta" SelectedDate="{Binding fechaAlta}"  Margin="10,5" Grid.Row="7" Grid.Column="1"/>
+            <TextBox x:Name="txt_Stock" Text="{Binding stock}" Margin="10,5" Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center"/>
 
         </Grid>
 
 
         <Label x:Name="warning" Margin="10,10,10,10" Foreground="Blue" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Height="30" Width="490" />
-        <Button Content="ACEPTAR" Style="{StaticResource buttonStyle1}" Click="Button_Click" Margin="220,0"/>
+        <Button Content="ACEPTAR" Style="{StaticResource buttonStyle1}" Click="Button_Click" Margin="331,0"/>
 
 
 

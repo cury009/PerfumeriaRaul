@@ -1,12 +1,12 @@
-﻿<Window x:Class="PerfumeriaRaul.Pages.MainPage"
+﻿<Window x:Class="PerfumeriaRaul.Pages.ConsultaProduct"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PerfumeriaRaul.Pages"
         mc:Ignorable="d"
-        Title="MainPage" Height="450" Width="800">
-    <Grid Background="{StaticResource background}" Margin="0,27,48,27" HorizontalAlignment="Right" Width="710">
+        Title="ConsultaProduct" Height="450" Width="800">
+    <Grid>
         
     </Grid>
 </Window>
