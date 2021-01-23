@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PerfumeriaRaul.ProductClass;
+using PerfumeriaRaul.xml;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using static PerfumeriaRaul.ProductClass.ProductHandler;
 
 namespace PerfumeriaRaul.Pages
 {
@@ -25,7 +28,7 @@ namespace PerfumeriaRaul.Pages
         public ProductoHandler productoHandler;
         public Producto producto;
         public bool verify;
-        public NewOrModifyProducto(ProductoHandler productoHandler)
+        public NewOrModifyProducto(string v, ProductoHandler productoHandler)
         {
             this.productoHandler = productoHandler;
         }
@@ -82,9 +85,13 @@ namespace PerfumeriaRaul.Pages
 
         }
 
+        public NewOrModifyProducto(string v, ProductHandler productHandler)
+        {
+        }
+
         private void Combo()
         {
-            var listaProductos = xml.Root.Elements("Categoria").Attributes("idCategoria");
+            var listaProductos = xml.Root.Elements("Tipo").Attributes("idTipo");
 
             for (int i = 0; i < listaProductos.Count(); i++)
             {
@@ -95,7 +102,7 @@ namespace PerfumeriaRaul.Pages
         private void txt_tipo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboMarca.Items.Clear();
-            var modeloList = xml.Root.Elements("Categoria").ElementAt(ComboCategoria.SelectedIndex).Elements("Marca").Attributes("nombre");
+            var modeloList = xml.Root.Elements("Tipo").ElementAt(TipoCategoria.SelectedIndex).Elements("Marca").Attributes("nombre");
 
             for (int i = 0; i < modeloList.Count(); i++)
             {
@@ -117,13 +124,13 @@ namespace PerfumeriaRaul.Pages
             else
             {
 
-                String Referencia = tReferencia.Text;
-                String Categoria = tCategoria.Text;
-                String Marca = tMarca.Text;
-                String Clase = ComboClase.Text;
-                float Precio = float.Parse(tPrecio.Text);
-                int stock = int.Parse(tStock.Text);
-                DateTime fechaAlta = (DateTime)tFecha.SelectedDate;
+                String Referencia = txtReferencia.Text;
+                String Tipo = TipoCategoria.Text;
+                String Marca = txtMarca.Text;
+                String Envase = EnvaseCombo.Text;
+                float Precio = float.Parse(txtPrecio.Text);
+                int stock = int.Parse(txtStock.Text);
+                DateTime fechaAlta = (DateTime)txtFecha.SelectedDate;
 
 
 
@@ -131,9 +138,9 @@ namespace PerfumeriaRaul.Pages
                 {
                     MessageBoxResult resultado = MessageBox.Show(
                     "Referencia: " + Referencia + "\n" +
-                    "Categoria: " + Categoria + "\n" +
+                    "Categoria: " + Tipo + "\n" +
                     "Marca:" + Marca + "\n" +
-                    "Clase: " + Clase + "\n" +
+                    "Envase: " + Envase + "\n" +
                     "Precio:" + Precio + "\n" +
                     "Stock: " + stock + "\n" +
                     "Fecha de alta: " + fechaAlta + "\n\n" +
@@ -146,7 +153,7 @@ namespace PerfumeriaRaul.Pages
                     {
                         case MessageBoxResult.Yes:
                             MessageBox.Show("se ha refistrado bien");
-                            Producto producto = new Producto(Referencia, Categoria, Marca, Clase, Precio, stock, fechaAlta);
+                            Producto producto = new Producto(Referencia, Tipo, Marca, Envase, Precio, stock,  fechaAlta );
                             Class1.addXMLProduct(producto);
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                             //MostrarUsuario mostrarUsuario = new MostrarUsuario(usuario);
@@ -169,20 +176,20 @@ namespace PerfumeriaRaul.Pages
 
         private void checkCategoria_Click(object sender, RoutedEventArgs e)
         {
-            if (ComboCategoria.IsVisible)
+            if (TipoCategoria.IsVisible)
             {
-                ComboCategoria.Visibility = Visibility.Hidden;
+                TipoCategoria.Visibility = Visibility.Hidden;
                 ComboMarca.Visibility = Visibility.Hidden;
-                tCategoria.Visibility = Visibility.Visible;
-                tMarca.Visibility = Visibility.Visible;
+                TipoCategoria.Visibility = Visibility.Visible;
+                txtMarca.Visibility = Visibility.Visible;
                 checkCategoria.IsEnabled = true;
             }
             else
             {
-                ComboCategoria.Visibility = Visibility.Visible;
+                TipoCategoria.Visibility = Visibility.Visible;
                 ComboMarca.Visibility = Visibility.Visible;
-                tCategoria.Visibility = Visibility.Hidden;
-                tMarca.Visibility = Visibility.Hidden;
+                TipoCategoria.Visibility = Visibility.Hidden;
+                txtMarca.Visibility = Visibility.Hidden;
                 checkCategoria.IsEnabled = false;
             }
         }
@@ -193,7 +200,7 @@ namespace PerfumeriaRaul.Pages
 
                 ComboMarca.Visibility = Visibility.Hidden;
 
-                tMarca.Visibility = Visibility.Visible;
+                txtMarca.Visibility = Visibility.Visible;
                 checkMarca.IsEnabled = true;
             }
             else

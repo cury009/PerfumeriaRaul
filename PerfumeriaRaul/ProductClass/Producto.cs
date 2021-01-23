@@ -22,7 +22,7 @@ namespace PerfumeriaRaul.ProductClass
 
         public String Stock { set; get; }
 
-        public Producto(string referencia, string tipo, string marca, string precio, string stock, DateTime fechaAlta)
+        public Producto(string referencia, string tipo, string marca, string precio, float precio1, string stock, DateTime fechaAlta)
         {
             this.Referencia = referencia;
             this.Tipo = tipo;
@@ -34,7 +34,7 @@ namespace PerfumeriaRaul.ProductClass
 
        
 
-        public Producto(string referencia)
+        public Producto(string referencia, string tipo)
         {
             this.Referencia = "";
             this.Tipo = "";

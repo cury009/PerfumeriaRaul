@@ -1,0 +1,51 @@
+﻿<Page x:Class="PerfumeriaRaul.Pages.ProductoGrid"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PerfumeriaRaul.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      Title="ProductoGrid">
+
+    <StackPanel>
+        <TextBlock Text="CONSULTA PRODUCTOS" HorizontalAlignment="Center" Margin="0,0,0,0" FontSize="22" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Tipo"/>
+            <ComboBox x:Name="Tipocategory" Width="200" SelectionChanged="TipoCombo_SelectionChanged"/>
+            <TextBlock Text="Busqueda"/>
+            <TextBox x:Name="busquedaTextBox" Width="171" TextChanged="TextBox_TextChanged"/>
+            <Button Content="Actualizar" Click="Button_Click_2"/>
+        </StackPanel>
+        <DataGrid x:Name="myDataGrid" Margin="5,30,5,0" Height="250" ColumnWidth="*" IsReadOnly="True"
+                  CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Referencia" Binding="{Binding Path=Referencia}"/>
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Path=Categoria}"/>
+                <DataGridTextColumn Header="Marca" Binding="{Binding Path=Marca}"/>
+                <DataGridTextColumn Header="Envase" Binding="{Binding Path=Clase}"/>
+                <DataGridTextColumn Header="Precio" Binding="{Binding Path=Precio}"/>
+                <DataGridTextColumn Header="Fecha Alta" Binding="{Binding Path=fechaAlta}"/>
+                <DataGridTextColumn Header="Stock" Binding="{Binding Path=stock}"/>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Editar" Background="GreenYellow" Click="Button_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Borrar" Background="Red" Click="Button_Click_1"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </StackPanel>
+</Page>

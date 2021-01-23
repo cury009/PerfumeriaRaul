@@ -9,28 +9,34 @@ namespace PerfumeriaRaul.ProductClass
 {
     public class ProductHandler
     {
-        public ObservableCollection<Producto> productoList { get; set; }
-
-        public ProductHandler()
+        public class ProductoHandler
         {
-            this.productoList = new ObservableCollection<Producto>();
+
+            public ObservableCollection<Producto> ProductList { get; set; }
+
+            public ProductoHandler()
+            {
+                this.ProductList = new ObservableCollection<Producto>();
+                Actualizarxml();
+            }
+
+            public void Addproduct(Producto producto)
+            {
+                ProductList.Add(producto);
+            }
+            public void Modifyproduct(Producto producto, int pos)
+            {
+                ProductList[pos] = producto;
+            }
+            public void Removeproduct(int pos)
+            {
+                ProductList.RemoveAt(pos);
+            }
+
+            public void Actualizarxml()
+            {
+                this.ProductList = Class1.LoadProductos();
+            }
         }
-
-        public void AddProduct(Producto product)
-        {
-            productoList.Add(product);
-        }
-
-        public void ModifyProduct(Producto producto, int pos)
-        {
-            productoList[pos] = producto;
-        }
-        public void RemoveProduct(int pos)
-        {
-            productoList.RemoveAt(pos);
-        }
-
-
-
     }
 }

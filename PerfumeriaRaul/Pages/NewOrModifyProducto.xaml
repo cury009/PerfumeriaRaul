@@ -39,17 +39,19 @@
             <TextBox x:Name="txtReferencia" Text="{Binding Path=Referencia}" Margin="10,5" Grid.Row="0"  Grid.Column="1" VerticalContentAlignment="Center"/>
             <ComboBox x:Name="TipoCategoria" Text="{Binding Path=Tipo}" Margin="9.8,5,10.4,0" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Height="22" VerticalAlignment="Top" SelectionChanged="txt_tipo_SelectionChanged"/>
             <TextBox x:Name="MarcaCategoria" Text="{Binding Path=Marca}" Margin="10,5" Grid.Row="1" Grid.Column="1" Visibility="Hidden" VerticalContentAlignment="Center"/>
-            <ComboBox x:Name="EnvaseClase" Grid.Row="3" Grid.Column="1" Margin="10,5" Text="{Binding Path=Envase}">
+            <ComboBox x:Name="EnvaseCombo" Grid.Row="3" Grid.Column="1" Margin="10,5" Text="{Binding Path=Envase}">
                 <ComboBoxItem Content="Frasco de cristal" IsSelected="True"/>
                 <ComboBoxItem Content="Bote de lata" />
                 <ComboBoxItem Content="paquete de plastico" />
                 <ComboBoxItem Content="estuche" />
+                <ComboBoxItem Content="botella de plastico" />
+                
             </ComboBox>
             <ComboBox x:Name="ComboMarca" Text="{Binding Path=Marca}" Margin="10,5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"/>
             <TextBox x:Name="txtMarca" Text="{Binding Path=Marca}" Margin="10,5" Grid.Row="2" Visibility="Hidden" Grid.Column="1" VerticalContentAlignment="Center"/>
             <TextBox x:Name="txtDescripcion" Text="{Binding Path=Descripcion}" Margin="10,5" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center"/>
             <TextBox x:Name="txtPrecio" Text="{Binding Path=Precio}" Margin="10,5" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center"/>
-            <DatePicker x:Name="tFecha" SelectedDate="{Binding Path=fechaAlta}" Margin="10,5" Grid.Row="6" Grid.Column="1"/>
+            <DatePicker x:Name="txtFecha" SelectedDate="{Binding Path=fechaAlta}" Margin="10,5" Grid.Row="6" Grid.Column="1"/>
             <CheckBox x:Name="checkCategoria" Grid.Row="1" Grid.Column="3" Margin="5,10,0,0" Click="checkCategoria_Click"/>
             <CheckBox x:Name="checkMarca"  Grid.Row="2" Grid.Column="3" Margin="5,10,0,0" Click="checkMarca_Click" />
             <TextBox x:Name="txtStock" Text="{Binding Path=stock}" Margin="10,5" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center"/>

@@ -49,13 +49,13 @@ namespace PerfumeriaRaul
         }
         private void Button_ClickNuevo(object sender, RoutedEventArgs e)
         {
-            myNavigationFrame.NavigationService.Navigate(new NewProductPage("Nuevo producto", productHandler));
+            myNavigationFrame.NavigationService.Navigate(new NewOrModifyProducto("Nuevo producto", productHandler));
         }
 
-        private void Button_ClickConsulta(object sender, RoutedEventArgs e)
+        /*private void Button_ClickConsulta(object sender, RoutedEventArgs e)
         {
-            myNavigationFrame.NavigationService.Navigate(new ConsultaProduct(productHandler));
-        }
+            myNavigationFrame.NavigationService.Navigate(new (productHandler));
+        }*/
 
 
 

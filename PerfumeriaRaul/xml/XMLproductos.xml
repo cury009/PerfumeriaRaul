@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mercadona>
-	<Tipo idCategoria="Perfume y Colonia">
+	<Tipo idTipo="Perfume y Colonia">
 		<Marca nombre="Deliphus" />
 		<Marca nombre="Nenuco">
 			<Articulo Referencia="01" Descripcion="Colonia" Envase="Bote" Precio="1"  Fecha="2021-01-22T00:00:00" Stock="123" />
@@ -13,7 +13,7 @@
 		<Marca nombre="Invictus" />
 		<Marca nombre="One Million" />
 	</Tipo>
-	<Tipo idCategoria="Cuidado del cabello">
+	<Tipo idTipo="Cuidado del cabello">
 		<Marca nombre="Tresemme" />
 		<Marca nombre="HS" />
 		<Marca nombre="Joshons Baby" />
@@ -21,13 +21,13 @@
 		<Marca nombre="Granier" />
 		<Marca nombre="Pantene" />
 	</Tipo>
-	<Tipo idCategoria="Cuidado e higiene Facial">
+	<Tipo idCTipo="Cuidado e higiene Facial">
 		<Marca nombre="Gel de afeitar Gillete" />
 		<Marca nombre="Crema de afeitar LEA" />
 		<Marca nombre="Cuchillas Gillete" />
 		<Marca nombre="Discos Desmaquillantes Deliphus" />
 	</Tipo>
-	<Tipo idCategoria="Parafarmacia">
+	<Tipo idTipo="Parafarmacia">
 		<Marca nombre="Tiritas Deliphus" />
 		<Marca nombre="Mascarillas Higienicas No ReutilizablesDeliphus" />
 		<Marca nombre="Alochol Deliphus" />
