@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PerfumeriaRaul.Pages"
       mc:Ignorable="d"
-      Title="MainPage" Width="696.135" Height="355.611">
+      Title="MainPage" Width="696.135" Height="300.611">
 
-    <Grid Background="{StaticResource background}" Margin="-4,51,0,-21" HorizontalAlignment="Right" Width="700"/>
+    <Grid Background="{StaticResource background}" Margin="-4,10,0,-21" HorizontalAlignment="Right" Width="700"/>
 </Page>

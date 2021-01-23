@@ -40,7 +40,7 @@ namespace PerfumeriaRaul
             myNavigationFrame = myFrame;
             productHandler = new ProductHandler();
             myNavigationFrame.NavigationService.Navigate(new MainPage());
-            productHandler = productHandler;
+            
         }
 
         private void Button_ClickPrincipal(object sender, RoutedEventArgs e)
@@ -51,6 +51,7 @@ namespace PerfumeriaRaul
         {
             myNavigationFrame.NavigationService.Navigate(new NewProductPage("Nuevo producto", productHandler));
         }
+
         private void Button_ClickConsulta(object sender, RoutedEventArgs e)
         {
             myNavigationFrame.NavigationService.Navigate(new ConsultaProduct(productHandler));
