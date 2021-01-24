@@ -25,11 +25,11 @@ namespace PerfumeriaRaul.Pages
     /// </summary>
     public partial class ProductoGrid : Page
     {
-        ProductoHandler ProductoHandler;
+        ProductHandler ProductoHandler;
         private XDocument xml = XDocument.Load("../../XML/XMLproductos.xml");
         private ObservableCollection<Producto> listaFiltrada;
 
-        public ProductoGrid(ProductoHandler productHandler)
+        public ProductoGrid(ProductHandler productHandler)
         {
             InitializeComponent();
             this.ProductoHandler = productHandler;
@@ -44,21 +44,21 @@ namespace PerfumeriaRaul.Pages
 
         private void InitTipoCategoria()
         {
-            TipoCategoria.Items.Add("Todas ...");
+            Tipocategory.Items.Add("Todas ...");
             var listaCategoriasXML = xml.Root.Elements("Tipo").Attributes("idTipo");
 
             foreach (XAttribute categoriaXML in listaCategoriasXML)
             {
 
-                TipoCategoria.Items.Add(categoriaXML.Value);
+                Tipocategory.Items.Add(categoriaXML.Value);
             }
-            TipoCombo.SelectedIndex = 0;
+            Tipocategory.SelectedIndex = 0;
         }
 
         private void UpdateProductList()
         {
 
-            TipoCombo.SelectedIndex = 0;
+            Tipocategory.SelectedIndex = 0;
             busquedaTextBox.Text = "";
             listaFiltrada = new ObservableCollection<Producto>(ProductoHandler.ProductList);
             myDataGrid.ItemsSource = ProductoHandler.ProductList;
@@ -69,7 +69,7 @@ namespace PerfumeriaRaul.Pages
 
         private void TipoCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (TipoCombo.SelectedIndex == 0)
+            if (Tipocategory.SelectedIndex == 0)
             {
 
                 UpdateProductList();
@@ -84,7 +84,7 @@ namespace PerfumeriaRaul.Pages
                 foreach (Producto product in ProductoHandler.ProductList)
                 {
 
-                    if (product.Tipo.Equals((string)TipoCombo.SelectedItem))
+                    if (product.Envase.Equals((string)Tipocategory.SelectedItem))
                     {
 
                         listaFiltrada.Add(product);

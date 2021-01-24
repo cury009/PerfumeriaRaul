@@ -30,7 +30,7 @@ namespace PerfumeriaRaul.xml
             bool isNewCategory = true;
             foreach (XAttribute categoria in listaCAtegorias)
             {
-                if (categoria.Value.Equals(p.Tipo))
+                if (categoria.Value.Equals(p.Envase))
                 {
                     xmlCategoria = categoria.Parent;
                     isNewCategory = false;
@@ -38,7 +38,7 @@ namespace PerfumeriaRaul.xml
                 }
                 else
                 {
-                    xmlCategoria = new XElement("Tipo", new XAttribute("idTipo", p.Tipo));
+                    xmlCategoria = new XElement("Tipo", new XAttribute("idTipo", p.Envase));
                     xmlModelo = new XElement("Marca", new XAttribute("nombre", producto.Marca));
                     isNewCategory = true;
                 }
@@ -81,7 +81,7 @@ namespace PerfumeriaRaul.xml
 
         public static void crearProducto()
         {
-            XElement xmlProducto = new XElement("Artirculo", 
+            XElement xmlProducto = new XElement("Articulo", 
             new XAttribute("Referencia", producto.Referencia),
             new XAttribute("Descripcion", producto.Descripcion),
             new XAttribute("Envase", producto.Envase),
@@ -101,7 +101,7 @@ namespace PerfumeriaRaul.xml
 
                 producto = new Producto();
                 producto.Referencia = productoxml.Attribute("Referencia").Value;
-                producto.Tipo = productoxml.Parent.Parent.Attribute("idTipo").Value;
+                producto.Envase = productoxml.Parent.Parent.Attribute("idTipo").Value;
                 producto.Marca = productoxml.Parent.Attribute("nombre").Value;
                 producto.Envase = productoxml.Attribute("Envase").Value;
                 producto.Precio = float.Parse(s: productoxml.Attribute("Precio").Value);

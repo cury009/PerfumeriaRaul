@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using static PerfumeriaRaul.ProductClass.ProductHandler;
+
 
 namespace PerfumeriaRaul.Pages
 {
@@ -25,13 +25,10 @@ namespace PerfumeriaRaul.Pages
     public partial class NewOrModifyProducto : Page
     {
         private XDocument xml = XDocument.Load("../../XML/XMLproductos.xml");
-        public ProductoHandler productoHandler;
+        public ProductHandler productoHandler;
         public Producto producto;
         public bool verify;
-        public NewOrModifyProducto(string v, ProductoHandler productoHandler)
-        {
-            this.productoHandler = productoHandler;
-        }
+       
 
         private bool Validation()
         {
@@ -61,7 +58,7 @@ namespace PerfumeriaRaul.Pages
             return validate;
         } //validacion
         //constructor de nuevo
-        public NewOrModifyProducto(string title, ProductoHandler productoHandler)
+        public NewOrModifyProducto(string title, ProductHandler productoHandler)
         {
             InitializeComponent();
             Combo();
@@ -73,7 +70,7 @@ namespace PerfumeriaRaul.Pages
         }
 
         //constructor de modificar
-        public NewOrModifyProducto(string title, ProductoHandler productoHandler, Producto producto)
+        public NewOrModifyProducto(string title, ProductHandler productoHandler, Producto producto)
         {
             InitializeComponent();
             Combo();
@@ -85,9 +82,7 @@ namespace PerfumeriaRaul.Pages
 
         }
 
-        public NewOrModifyProducto(string v, ProductHandler productHandler)
-        {
-        }
+       
 
         private void Combo()
         {
@@ -128,6 +123,7 @@ namespace PerfumeriaRaul.Pages
                 String Tipo = TipoCategoria.Text;
                 String Marca = txtMarca.Text;
                 String Envase = EnvaseCombo.Text;
+                String Descripcion = txtDescripcion.Text;
                 float Precio = float.Parse(txtPrecio.Text);
                 int stock = int.Parse(txtStock.Text);
                 DateTime fechaAlta = (DateTime)txtFecha.SelectedDate;
@@ -153,7 +149,7 @@ namespace PerfumeriaRaul.Pages
                     {
                         case MessageBoxResult.Yes:
                             MessageBox.Show("se ha refistrado bien");
-                            Producto producto = new Producto(Referencia, Tipo, Marca, Envase, Precio, stock,  fechaAlta );
+                            Producto producto = new Producto(Referencia, Envase,  Marca,  Descripcion,  Precio,  fechaAlta, stock);
                             Class1.addXMLProduct(producto);
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                             //MostrarUsuario mostrarUsuario = new MostrarUsuario(usuario);

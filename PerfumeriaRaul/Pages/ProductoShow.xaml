@@ -1,0 +1,58 @@
+﻿<Page x:Class="PerfumeriaRaul.Pages.ProductoShow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PerfumeriaRaul.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductoShow">
+
+    <StackPanel Background="White">
+
+        <TextBlock Text="CONSULTAR PRODUCTO" HorizontalAlignment="Center"  FontSize="22" FontWeight="Bold" Margin="0,15,0,15"/>
+        <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=ProductList}" Margin="0,5" Width="150" SelectionChanged="comboProduct_SelectionChanged" />
+
+        <Grid x:Name="ProductoDataGrid" Margin="189,0,226,0" Height="266" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Referencia:" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Categoria:" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Marca:" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Clase:" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Precio:" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Stock:" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Fecha de Alta:" HorizontalAlignment="Right"/>
+
+
+
+            <TextBlock Margin="10,5" Text="{Binding Path=Referencia}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=Categoria}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=Marca}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=Clase}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=Precio}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=stock}" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="10,5" Text="{Binding Path=fechaAlta}" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left"/>
+
+
+        </Grid>
+
+        <StackPanel  x:Name="buttonsPanel" Visibility="Visible" Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="MODIFICAR" Background="Green" Click="Button_Click" Margin="0,0,30,5" Width="118"/>
+            <Button Content="  BORRAR " Background="Red" Click="Button_Click_1" Margin="0,0,0,5" Width="105"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

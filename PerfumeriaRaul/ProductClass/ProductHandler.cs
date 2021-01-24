@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PerfumeriaRaul.xml;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,12 +10,11 @@ namespace PerfumeriaRaul.ProductClass
 {
     public class ProductHandler
     {
-        public class ProductoHandler
-        {
+        
 
             public ObservableCollection<Producto> ProductList { get; set; }
 
-            public ProductoHandler()
+            public ProductHandler()
             {
                 this.ProductList = new ObservableCollection<Producto>();
                 Actualizarxml();
@@ -37,6 +37,6 @@ namespace PerfumeriaRaul.ProductClass
             {
                 this.ProductList = Class1.LoadProductos();
             }
-        }
+        
     }
 }

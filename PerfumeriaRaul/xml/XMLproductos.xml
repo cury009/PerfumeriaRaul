@@ -1,41 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mercadona>
-	<Tipo idTipo="Perfume y Colonia">
-		<Marca nombre="Deliphus" />
-		<Marca nombre="Nenuco">
-			<Articulo Referencia="01" Descripcion="Colonia" Envase="Bote" Precio="1"  Fecha="2021-01-22T00:00:00" Stock="123" />
-		</Marca>
-		<Marca nombre="calvin Klein" />
-		<Marca nombre="Adolfo Dominguez" />
-		<Marca nombre="Carolina Herrera" />
-		<Marca nombre="Pacha Ibiza" />
-		<Marca nombre="Shakira" />
-		<Marca nombre="Invictus" />
-		<Marca nombre="One Million" />
-	</Tipo>
-	<Tipo idTipo="Cuidado del cabello">
-		<Marca nombre="Tresemme" />
-		<Marca nombre="HS" />
-		<Marca nombre="Joshons Baby" />
-		<Marca nombre="Deliphus" />
-		<Marca nombre="Granier" />
-		<Marca nombre="Pantene" />
-	</Tipo>
-	<Tipo idCTipo="Cuidado e higiene Facial">
-		<Marca nombre="Gel de afeitar Gillete" />
-		<Marca nombre="Crema de afeitar LEA" />
-		<Marca nombre="Cuchillas Gillete" />
-		<Marca nombre="Discos Desmaquillantes Deliphus" />
-	</Tipo>
-	<Tipo idTipo="Parafarmacia">
-		<Marca nombre="Tiritas Deliphus" />
-		<Marca nombre="Mascarillas Higienicas No ReutilizablesDeliphus" />
-		<Marca nombre="Alochol Deliphus" />
-		<Marca nombre="Algodon Deliphus" />
-		<Marca nombre="Agua Oxigenada Deliphus" />
-		<Marca nombre="Esparadrapo Deliphus" />
-		<Marca nombre="Termometro Deliphus" />
-		<Marca nombre="Gel de manos Deliphus" />
-	</Tipo>
-	
+  <Tipo idTipo="Perfume y Colonia">
+    <Marca nombre="Deliphus" />
+    <Marca nombre="Nenuco">
+      <Articulo Referencia="01" Descripcion="Colonia" Envase="Bote" Precio="1" Fecha="2021-01-22T00:00:00" Stock="123" />
+    </Marca>
+    <Marca nombre="calvin Klein" />
+    <Marca nombre="Adolfo Dominguez" />
+    <Marca nombre="Carolina Herrera" />
+    <Marca nombre="Pacha Ibiza" />
+    <Marca nombre="Shakira" />
+    <Marca nombre="Invictus" />
+    <Marca nombre="One Million" />
+  </Tipo>
+  <Tipo idTipo="Cuidado del cabello">
+    <Marca nombre="Tresemme" />
+    <Marca nombre="HS" />
+    <Marca nombre="Joshons Baby" />
+    <Marca nombre="Deliphus" />
+    <Marca nombre="Granier" />
+    <Marca nombre="Pantene" />
+  </Tipo>
+  <Tipo idCTipo="Cuidado e higiene Facial">
+    <Marca nombre="Gel de afeitar Gillete" />
+    <Marca nombre="Crema de afeitar LEA" />
+    <Marca nombre="Cuchillas Gillete" />
+    <Marca nombre="Discos Desmaquillantes Deliphus" />
+  </Tipo>
+  <Tipo idTipo="Parafarmacia">
+    <Marca nombre="Tiritas Deliphus" />
+    <Marca nombre="Mascarillas Higienicas No ReutilizablesDeliphus" />
+    <Marca nombre="Alochol Deliphus" />
+    <Marca nombre="Algodon Deliphus" />
+    <Marca nombre="Agua Oxigenada Deliphus" />
+    <Marca nombre="Esparadrapo Deliphus" />
+    <Marca nombre="Termometro Deliphus" />
+    <Marca nombre="Gel de manos Deliphus" />
+  </Tipo>
+  <Tipo idTipo="botella de plastico">
+    <Marca nombre="Nenuco">
+      <Articulo Referencia="123456" Descripcion="limon" Envase="botella de plastico" Precio="3" Fecha="2021-01-06T00:00:00" Stock="4" />
+    </Marca>
+  </Tipo>
 </Mercadona>
