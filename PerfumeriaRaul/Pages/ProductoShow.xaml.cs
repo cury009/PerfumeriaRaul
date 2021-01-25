@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PerfumeriaRaul.ProductClass;
+using PerfumeriaRaul.xml;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,24 +22,36 @@ namespace PerfumeriaRaul.Pages
     /// </summary>
     public partial class ProductoShow : Page
     {
-        public ProductoShow(ProductClass.ProductHandler productHandler)
+        public ProductHandler ProductoHandler;
+        public Producto producto;
+        public int pos;
+        public ProductoShow(ProductHandler productoHandler)
         {
             InitializeComponent();
+            this.ProductoHandler = productoHandler;
+            comboProduct.DataContext = productoHandler;
+            pos = comboProduct.SelectedIndex;
+            buttonsPanel.Visibility = Visibility.Hidden;
         }
 
         private void comboProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            producto = (Producto)comboProduct.SelectedItem;
+            ProductoDataGrid.DataContext = producto;
+            pos = comboProduct.SelectedIndex;
+            buttonsPanel.Visibility = Visibility.Visible;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_ClickModificar(object sender, RoutedEventArgs e)
         {
-
+            XMLHandler.editarProducto(producto);
+            MainWindow.myNavigationFrame.NavigationService.Navigate(new NewOrModifyProducto("Modificar usuario", ProductoHandler, (Producto)producto.Clone()));
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_ClickBorrar(object sender, RoutedEventArgs e)
         {
-
+            XMLHandler  .RemoveProducto(producto);
+            MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
         }
     }
 }

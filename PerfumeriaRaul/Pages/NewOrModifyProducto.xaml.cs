@@ -112,7 +112,7 @@ namespace PerfumeriaRaul.Pages
             if (verify)
             {
                 //productoHandler.Modifyproduct(producto, pos);
-                Class1.editarProducto(producto);
+                XMLHandler.editarProducto(producto);
                 MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
 
             }
@@ -148,12 +148,11 @@ namespace PerfumeriaRaul.Pages
                     switch (resultado)
                     {
                         case MessageBoxResult.Yes:
-                            MessageBox.Show("se ha refistrado bien");
+                            MessageBox.Show("se ha registrado correctamente");
                             Producto producto = new Producto(Referencia,  Envase,  Marca, Tipo,  Descripcion,  Precio,  fechaAlta, stock);
-                            Class1.addXMLProduct(producto);
+                            XMLHandler.addXMLProduct(producto);
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
-                            //MostrarUsuario mostrarUsuario = new MostrarUsuario(usuario);
-                            //mostrarUsuario.Show();
+                            
                             break;
                         case MessageBoxResult.No:
                             break;
@@ -176,7 +175,7 @@ namespace PerfumeriaRaul.Pages
             {
                 TipoCategoria.Visibility = Visibility.Hidden;
                 ComboMarca.Visibility = Visibility.Hidden;
-                TipoCategoria.Visibility = Visibility.Visible;
+                textCategoria.Visibility = Visibility.Visible;
                 txtMarca.Visibility = Visibility.Visible;
                 checkCategoria.IsEnabled = true;
             }
@@ -208,7 +207,6 @@ namespace PerfumeriaRaul.Pages
 
         }
 
-
-    
+        
     }
 }

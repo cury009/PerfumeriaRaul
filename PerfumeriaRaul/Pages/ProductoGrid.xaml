@@ -15,7 +15,7 @@
             <ComboBox x:Name="Tipocategory" Width="199" SelectionChanged="TipoCombo_SelectionChanged"/>
             <TextBlock Text="Busqueda: " Width="132" TextAlignment="Right"/>
             <TextBox x:Name="busquedaTextBox" Width="245" TextChanged="TextBox_TextChanged"/>
-            <Button Content="Actualizar" Click="Button_Click_2" Width="122"/>
+            <Button Content="Actualizar" Click="Button_ClickActualizar" Width="122"/>
         </StackPanel>
         <DataGrid x:Name="myDataGrid" Margin="5,30,5,0" Height="250" ColumnWidth="*" IsReadOnly="True"
                   CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True"
@@ -33,14 +33,14 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Editar" Background="GreenYellow" Click="Button_Click"/>
+                            <Button Content="Editar" Background="Green" Click="Button_ClickModificar"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Borrar" Background="Red" Click="Button_Click_1"/>
+                            <Button Content="Borrar" Background="Red" Click="Button_ClickBorrar"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

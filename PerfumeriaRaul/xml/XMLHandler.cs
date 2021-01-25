@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace PerfumeriaRaul.xml
 {
-    public class Class1
+    public class XMLHandler
     {
         private static XDocument xml;
         public static Producto producto;

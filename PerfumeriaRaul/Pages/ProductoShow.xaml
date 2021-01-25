@@ -11,12 +11,12 @@
     <StackPanel Background="White">
 
         <TextBlock Text="CONSULTAR PRODUCTO" HorizontalAlignment="Center"  FontSize="22" FontWeight="Bold" Margin="0,15,0,15"/>
-        <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=ProductList}" Margin="0,5" Width="150" SelectionChanged="comboProduct_SelectionChanged" />
-
-        <Grid x:Name="ProductoDataGrid" Margin="189,0,226,0" Height="266" Background="White">
+        <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=ProductList}" Margin="237,5,212,5" SelectionChanged="comboProduct_SelectionChanged" />
+        <Grid x:Name="ProductoDataGrid" Margin="84,0,33,0" Height="266" Background="White">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="342*"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="341*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -29,30 +29,30 @@
                 <RowDefinition/>
 
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="Referencia:" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Categoria:" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Marca:" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Clase:" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Row="4" Grid.Column="0" Text="Precio:" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Row="5" Grid.Column="0" Text="Stock:" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Row="6" Grid.Column="0" Text="Fecha de Alta:" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Referencia:" HorizontalAlignment="Right" Width="58"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Tipo:" HorizontalAlignment="Right" Width="27"/>
+            <TextBlock Grid.Row="2" Text="Marca:" HorizontalAlignment="Right" Margin="0,0,4,0" Width="35"/>
+            <TextBlock Grid.Row="3" Text="Envase:" HorizontalAlignment="Right" Margin="0,0,4,0" Width="43"/>
+            <TextBlock Grid.Row="4" Text="Precio:" HorizontalAlignment="Right" Margin="0,0,4,0" Width="35"/>
+            <TextBlock Grid.Row="5" Text="Stock:" HorizontalAlignment="Right" Margin="0,0,4,0" Width="31"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Fecha de Alta:" HorizontalAlignment="Right" Width="74"/>
 
 
 
-            <TextBlock Margin="10,5" Text="{Binding Path=Referencia}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBlock Margin="10,5" Text="{Binding Path=Categoria}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBlock Margin="10,5" Text="{Binding Path=Marca}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBlock Margin="10,5" Text="{Binding Path=Clase}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBlock Margin="10,5" Text="{Binding Path=Precio}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBlock Margin="10,5" Text="{Binding Path=stock}" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBlock Margin="10,5" Text="{Binding Path=fechaAlta}" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock Margin="8,5,0,5" Text="{Binding Referencia}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Width="323"/>
+            <TextBlock Margin="8,5,0,5" Text="{Binding Tipo}" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Width="323"/>
+            <TextBlock Margin="8,5,0,5" Text="{Binding Marca}" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Width="323"/>
+            <TextBlock Margin="8,5,0,5" Text="{Binding Envase}" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" Width="323"/>
+            <TextBlock Margin="8,5,0,5" Text="{Binding Precio}" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Width="323"/>
+            <TextBlock Margin="8,5,0,5" Text="{Binding Stock}" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" Width="323"/>
+            <TextBlock Margin="8,5,0,5" Text="{Binding FechaAlta}" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" Width="323"/>
 
 
         </Grid>
 
         <StackPanel  x:Name="buttonsPanel" Visibility="Visible" Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="MODIFICAR" Background="Green" Click="Button_Click" Margin="0,0,30,5" Width="118"/>
-            <Button Content="  BORRAR " Background="Red" Click="Button_Click_1" Margin="0,0,0,5" Width="105"/>
+            <Button Content="MODIFICAR" Background="Green" Click="Button_ClickModificar" Margin="0,0,30,5" Width="118"/>
+            <Button Content="BORRAR" Background="Red" Click="Button_ClickBorrar" Margin="0,0,0,5" Width="105"/>
         </StackPanel>
     </StackPanel>
 </Page>

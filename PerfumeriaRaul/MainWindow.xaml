@@ -16,7 +16,7 @@
             <Button Content="PRINCIPAL" Click="Button_ClickPrincipal" Width="133"/>
 
             <Button Content="NUEVO" Click="Button_ClickNuevo" Margin="0,8,0,7" Width="157"/>
-            <Button Content="BUSCAR" Click="Button_ClickConsulta" Margin="0,8,0,7" Width="122"/>
+            <Button Content="BUSCAR" Click="Button_ClickBuscar" Margin="0,8,0,7" Width="122"/>
             <Button Content="CONSULTA" Click="Button_ClickConsulta" Margin="0,8,0,7" Width="138"/>
             <Button Content="SALIR" Click="Button_ClickSalir" Margin="0,8,0,7" Width="134" />
         </StackPanel>

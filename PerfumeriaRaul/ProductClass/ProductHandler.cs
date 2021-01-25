@@ -35,7 +35,7 @@ namespace PerfumeriaRaul.ProductClass
 
             public void Actualizarxml()
             {
-                this.ProductList = Class1.LoadProductos();
+                this.ProductList = XMLHandler.LoadProductos();
             }
         
     }

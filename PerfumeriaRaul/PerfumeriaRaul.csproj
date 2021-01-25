@@ -61,7 +61,7 @@
     <Compile Include="Pages\ProductoShow.xaml.cs">
       <DependentUpon>ProductoShow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="xml\Class1.cs" />
+    <Compile Include="xml\XMLHandler.cs" />
     <Page Include="Dictionaries\MyStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
