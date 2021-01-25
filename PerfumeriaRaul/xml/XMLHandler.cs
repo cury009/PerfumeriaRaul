@@ -24,13 +24,13 @@ namespace PerfumeriaRaul.xml
 
 
 
-        private static void AddCategoria(Producto p)
+        private static void AddTipo(Producto p)
         {
             var listaCAtegorias = xml.Root.Elements("Tipo").Attributes("idTipo");
             bool isNewCategory = true;
             foreach (XAttribute categoria in listaCAtegorias)
             {
-                if (categoria.Value.Equals(p.Envase))
+                if (categoria.Value.Equals(producto.Tipo))
                 {
                     xmlCategoria = categoria.Parent;
                     isNewCategory = false;
@@ -38,7 +38,7 @@ namespace PerfumeriaRaul.xml
                 }
                 else
                 {
-                    xmlCategoria = new XElement("Tipo", new XAttribute("idTipo", p.Envase));
+                    xmlCategoria = new XElement("Tipo", new XAttribute("idTipo", producto.Tipo));
                     xmlModelo = new XElement("Marca", new XAttribute("nombre", producto.Marca));
                     isNewCategory = true;
                 }
@@ -53,7 +53,7 @@ namespace PerfumeriaRaul.xml
         {
             producto = p;
             LoadXMl();
-            AddCategoria(p);
+            AddTipo(p);
             addModelo();
             crearProducto();
             saveXML();
@@ -118,7 +118,7 @@ namespace PerfumeriaRaul.xml
         public static void RemoveProducto(Producto p)
         {
             LoadXMl();
-            var listaProductos = xml.Root.Elements("Tipo").Elements("Marca").Elements("Envase").Attributes("Referencia");
+            var listaProductos = xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo").Attributes("Referencia");
 
             foreach (XAttribute referencia in listaProductos)
             {
@@ -134,7 +134,7 @@ namespace PerfumeriaRaul.xml
         public static void editarProducto(Producto p)
         {
             LoadXMl();
-            var listaProductos = xml.Root.Elements("Tipo").Elements("Marca").Elements("Envase").Attributes("Referencia");
+            var listaProductos = xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo").Attributes("Referencia");
 
             foreach (XAttribute Referencia in listaProductos)
             {

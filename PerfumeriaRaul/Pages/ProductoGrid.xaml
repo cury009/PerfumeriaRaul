@@ -14,8 +14,8 @@
             <TextBlock Text="Tipo: " Width="58" TextAlignment="Right"/>
             <ComboBox x:Name="Tipocategory" Width="199" SelectionChanged="TipoCombo_SelectionChanged"/>
             <TextBlock Text="Busqueda: " Width="132" TextAlignment="Right"/>
-            <TextBox x:Name="busquedaTextBox" Width="245" TextChanged="TextBox_TextChanged"/>
-            <Button Content="Actualizar" Click="Button_ClickActualizar" Width="122"/>
+            <TextBox x:Name="busquedaTextBox" Width="206" TextChanged="TextBox_TextChanged"/>
+            <Button Content="Actualizar" Click="Button_ClickActualizar" Width="80"/>
         </StackPanel>
         <DataGrid x:Name="myDataGrid" Margin="5,30,5,0" Height="250" ColumnWidth="*" IsReadOnly="True"
                   CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True"

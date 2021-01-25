@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mercadona>
   <Tipo idTipo="Perfume y Colonia">
-    <Marca nombre="Deliphus" />
-    <Marca nombre="Nenuco">
-      <Articulo Referencia="01" Descripcion="Colonia" Envase="Bote" Precio="1" Fecha="2021-01-22T00:00:00" Stock="123" />
+    <Marca nombre="Deliphus">
+      <Articulo Referencia="01" Descripcion="10 cl" Envase="Frasco de cristal" Precio="5" Fecha="2021-01-25T00:00:00" Stock="6" />
     </Marca>
+    <Marca nombre="Nenuco" />
     <Marca nombre="calvin Klein" />
     <Marca nombre="Adolfo Dominguez" />
     <Marca nombre="Carolina Herrera" />
@@ -29,34 +29,13 @@
   </Tipo>
   <Tipo idTipo="Parafarmacia">
     <Marca nombre="Tiritas Deliphus" />
-    <Marca nombre="Mascarillas Higienicas No ReutilizablesDeliphus">
-      <Articulo Referencia="01234565" Descripcion="Higienicas" Envase="Paquete" Precio="1" Fecha="2021-01-22T00:00:00" Stock="123" />
-    </Marca>
+    <Marca nombre="Mascarillas Higienicas No ReutilizablesDeliphus" />
     <Marca nombre="Alochol Deliphus" />
     <Marca nombre="Algodon Deliphus" />
     <Marca nombre="Agua Oxigenada Deliphus" />
     <Marca nombre="Esparadrapo Deliphus" />
     <Marca nombre="Termometro Deliphus" />
     <Marca nombre="Gel de manos Deliphus" />
-  </Tipo>
-  <Tipo idTipo="botella de plastico">
-    <Marca nombre="Nenuco">
-      <Articulo Referencia="123456" Descripcion="limon" Envase="botella de plastico" Precio="3" Fecha="2021-01-06T00:00:00" Stock="4" />
-      <Articulo Referencia="12345678" Descripcion="33 cl" Envase="botella de plastico" Precio="1" Fecha="2021-01-09T00:00:00" Stock="10" />
-      <Articulo Referencia="123456" Descripcion="limon" Envase="botella de plastico" Precio="3" Fecha="2021-01-06T00:00:00" Stock="4" />
-    </Marca>
-    <Marca nombre="Alochol Deliphus">
-      <Articulo Referencia="1234567" Descripcion="limon" Envase="botella de plastico" Precio="3" Fecha="2021-01-06T00:00:00" Stock="4" />
-    </Marca>
-  </Tipo>
-  <Tipo idTipo="Paquete">
-    <Marca nombre="Mascarillas Higienicas No ReutilizablesDeliphus">
-      <Articulo Referencia="01234565" Descripcion="Higienicas" Envase="Paquete" Precio="1" Fecha="2021-01-22T00:00:00" Stock="123" />
-    </Marca>
-  </Tipo>
-  <Tipo idTipo="Bote">
-    <Marca nombre="Nenuco">
-      <Articulo Referencia="01234" Descripcion="Colonia en clase" Envase="Bote" Precio="1" Fecha="2021-01-22T00:00:00" Stock="123" />
-    </Marca>
+    <Marca nombre="Gel de afeitar Gillete" />
   </Tipo>
 </Mercadona>
