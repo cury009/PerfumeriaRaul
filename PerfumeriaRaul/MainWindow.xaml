@@ -5,21 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PerfumeriaRaul"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
-    
-    
+        Title="MainWindow" Height="593" Width="800">
+
+
     <StackPanel Background="white">
         <StackPanel.Resources>
             <Style TargetType="Button" BasedOn="{StaticResource menu}"/>
         </StackPanel.Resources>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="739" Height="40" Margin="53,0,0,0">
-            <Button Content="PRINCIPAL" Click="Button_ClickPrincipal" Margin="0,8" Width="173"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="685" Height="40" Margin="40,10">
+            <Button Content="PRINCIPAL" Click="Button_ClickPrincipal" Width="133"/>
 
-            <Button Content="NUEVO" Click="Button_ClickNuevo" Margin="0,8,0,7" Width="192"/>
-            <Button Content="Consulta" Click="Button_ClickConsulta" Margin="0,8,0,7" Width="161"/>
-            <Button Content="SALIR" Click="Button_ClickSalir" Margin="0,8,0,7" Width="151" />
+            <Button Content="NUEVO" Click="Button_ClickNuevo" Margin="0,8,0,7" Width="157"/>
+            <Button Content="BUSCAR" Click="Button_ClickConsulta" Margin="0,8,0,7" Width="122"/>
+            <Button Content="CONSULTA" Click="Button_ClickConsulta" Margin="0,8,0,7" Width="138"/>
+            <Button Content="SALIR" Click="Button_ClickSalir" Margin="0,8,0,7" Width="134" />
         </StackPanel>
 
-        <Frame x:Name="myFrame" Margin="20,10,20,10" NavigationUIVisibility="Hidden" Height="685"/>
+        <Frame x:Name="myFrame" Margin="20,10,20,10" NavigationUIVisibility="Hidden" Height="472"/>
     </StackPanel>
 </Window>

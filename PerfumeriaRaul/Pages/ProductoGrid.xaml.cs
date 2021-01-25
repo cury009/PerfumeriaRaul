@@ -40,6 +40,7 @@ namespace PerfumeriaRaul.Pages
 
         public ProductoGrid()
         {
+
         }
 
         private void InitTipoCategoria()
@@ -57,14 +58,14 @@ namespace PerfumeriaRaul.Pages
 
         private void UpdateProductList()
         {
-
+            ProductoHandler.Actualizarxml();
             Tipocategory.SelectedIndex = 0;
             busquedaTextBox.Text = "";
             listaFiltrada = new ObservableCollection<Producto>(ProductoHandler.ProductList);
             myDataGrid.ItemsSource = ProductoHandler.ProductList;
             myDataGrid.DataContext = ProductoHandler.ProductList;
             myDataGrid.Items.Refresh();
-            ProductoHandler.Actualizarxml();
+            
         }
 
         private void TipoCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -40,6 +40,7 @@
   <Tipo idTipo="botella de plastico">
     <Marca nombre="Nenuco">
       <Articulo Referencia="123456" Descripcion="limon" Envase="botella de plastico" Precio="3" Fecha="2021-01-06T00:00:00" Stock="4" />
+      <Articulo Referencia="12345678" Descripcion="33 cl" Envase="botella de plastico" Precio="1" Fecha="2021-01-09T00:00:00" Stock="10" />
     </Marca>
   </Tipo>
 </Mercadona>

@@ -54,7 +54,7 @@ namespace PerfumeriaRaul
 
         private void Button_ClickConsulta(object sender, RoutedEventArgs e)
         {
-            myNavigationFrame.NavigationService.Navigate(new ProductoShow(productHandler));
+            myNavigationFrame.NavigationService.Navigate(new ProductoGrid(productHandler));
         }
 
 

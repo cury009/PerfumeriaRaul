@@ -12,6 +12,8 @@ namespace PerfumeriaRaul.ProductClass
         public String Envase { set; get; }
         public String Marca { set; get; }
 
+        public String Tipo { set; get; }
+
         
         
         public String Descripcion { set; get;  }
@@ -22,11 +24,12 @@ namespace PerfumeriaRaul.ProductClass
 
         public int Stock { set; get; }
 
-        public Producto(string referencia, string envase, string marca,  string descripcion, float precio, DateTime fechaAlta, int stock) : this(referencia, envase)
+        public Producto(string referencia, string envase, string marca, string tipo,  string descripcion, float precio, DateTime fechaAlta, int stock) : this(referencia, envase)
         {
             Referencia = referencia;
             Envase = envase;
             Marca = marca;
+            Tipo = tipo;
             Descripcion = descripcion;
             Precio = precio;
             FechaAlta = fechaAlta;
@@ -39,6 +42,7 @@ namespace PerfumeriaRaul.ProductClass
             this.Envase = "";
             this.Descripcion = "";
             this.Marca = "";
+            this.Tipo = "";
             this.Precio = 0.0f;
             this.Stock = 0;
             this.FechaAlta = DateTime.Now;
@@ -50,6 +54,7 @@ namespace PerfumeriaRaul.ProductClass
             this.Envase = "";
             this.Descripcion = "";
             this.Marca = "";
+            this.Tipo = "";
             this.Precio = 0.0f;
             this.Stock = 0;
             this.FechaAlta = DateTime.Now;
@@ -68,7 +73,7 @@ namespace PerfumeriaRaul.ProductClass
 
         public string GetAllValues()
         {
-            return this.Referencia + " " + this.Envase + " " + this.Marca + " " + this.Precio + " "+ this.Stock + " " + this.FechaAlta;
+            return this.Referencia + " " + this.Envase + " " + this.Marca + " "+this.Tipo+" " +this.Descripcion+" "+ this.Precio + " "+ this.Stock + " " + this.FechaAlta;
         }
     }
 }

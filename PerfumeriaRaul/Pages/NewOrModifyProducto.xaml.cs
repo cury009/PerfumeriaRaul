@@ -149,7 +149,7 @@ namespace PerfumeriaRaul.Pages
                     {
                         case MessageBoxResult.Yes:
                             MessageBox.Show("se ha refistrado bien");
-                            Producto producto = new Producto(Referencia, Envase,  Marca,  Descripcion,  Precio,  fechaAlta, stock);
+                            Producto producto = new Producto(Referencia,  Envase,  Marca, Tipo,  Descripcion,  Precio,  fechaAlta, stock);
                             Class1.addXMLProduct(producto);
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                             //MostrarUsuario mostrarUsuario = new MostrarUsuario(usuario);

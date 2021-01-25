@@ -11,23 +11,24 @@
     <StackPanel>
         <TextBlock Text="CONSULTA PRODUCTOS" HorizontalAlignment="Center" Margin="0,0,0,0" FontSize="22" FontWeight="Bold"/>
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Tipo"/>
-            <ComboBox x:Name="Tipocategory" Width="200" SelectionChanged="TipoCombo_SelectionChanged"/>
-            <TextBlock Text="Busqueda"/>
-            <TextBox x:Name="busquedaTextBox" Width="171" TextChanged="TextBox_TextChanged"/>
-            <Button Content="Actualizar" Click="Button_Click_2"/>
+            <TextBlock Text="Tipo: " Width="58" TextAlignment="Right"/>
+            <ComboBox x:Name="Tipocategory" Width="199" SelectionChanged="TipoCombo_SelectionChanged"/>
+            <TextBlock Text="Busqueda: " Width="132" TextAlignment="Right"/>
+            <TextBox x:Name="busquedaTextBox" Width="245" TextChanged="TextBox_TextChanged"/>
+            <Button Content="Actualizar" Click="Button_Click_2" Width="122"/>
         </StackPanel>
         <DataGrid x:Name="myDataGrid" Margin="5,30,5,0" Height="250" ColumnWidth="*" IsReadOnly="True"
                   CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True"
                   ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Referencia" Binding="{Binding Path=Referencia}"/>
-                <DataGridTextColumn Header="Tipo" Binding="{Binding Path=Categoria}"/>
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Path=Tipo}"/>
+                <DataGridTextColumn Header="Descripcion"  Binding="{Binding Path=Descripcion}"/>
                 <DataGridTextColumn Header="Marca" Binding="{Binding Path=Marca}"/>
-                <DataGridTextColumn Header="Envase" Binding="{Binding Path=Clase}"/>
+                <DataGridTextColumn Header="Envase" Binding="{Binding Path=Envase}"/>
                 <DataGridTextColumn Header="Precio" Binding="{Binding Path=Precio}"/>
-                <DataGridTextColumn Header="Fecha Alta" Binding="{Binding Path=fechaAlta}"/>
-                <DataGridTextColumn Header="Stock" Binding="{Binding Path=stock}"/>
+                <DataGridTextColumn Header="Fecha Alta" Binding="{Binding Path=FechaAlta}"/>
+                <DataGridTextColumn Header="Stock" Binding="{Binding Path=Stock}"/>
 
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
