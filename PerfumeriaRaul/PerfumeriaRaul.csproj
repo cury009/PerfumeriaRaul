@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="imagenes\ImageHandler.cs" />
     <Compile Include="ProductPages\ProductoGrid.xaml.cs">
       <DependentUpon>ProductoGrid.xaml</DependentUpon>
     </Compile>

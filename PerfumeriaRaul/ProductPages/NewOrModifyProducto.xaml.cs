@@ -1,4 +1,5 @@
-﻿using PerfumeriaRaul.ProductClass;
+﻿using PerfumeriaRaul.imagenes;
+using PerfumeriaRaul.ProductClass;
 using PerfumeriaRaul.xml;
 using System;
 using System.Collections.Generic;
@@ -207,6 +208,14 @@ namespace PerfumeriaRaul.Pages
 
         }
 
-        
+        private void addImageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            BitmapImage bitmapImage = ImageHandler.GetBitmapFromFile();
+            if (bitmapImage != null)
+            {
+                myImage.Source = bitmapImage;
+            }
+
+        }
     }
 }
