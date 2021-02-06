@@ -10,7 +10,7 @@
 
     <StackPanel Background="White">
 
-        <TextBlock Text="CONSULTAR PRODUCTO" HorizontalAlignment="Center"  FontSize="22" FontWeight="Bold" Margin="231,15,310,15" Height="34" Width="259"/>
+        <TextBlock Text="CONSULTAR PRODUCTO" HorizontalAlignment="Center"  FontSize="22" FontWeight="Bold" Margin="100,20"/>
         <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=ProductList}" Margin="237,5,212,5" SelectionChanged="comboProduct_SelectionChanged" />
         <Grid x:Name="ProductoDataGrid" Margin="84,0,33,0" Height="266" Background="White">
             <Grid.ColumnDefinitions>

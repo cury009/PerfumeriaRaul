@@ -27,12 +27,13 @@ namespace PerfumeriaRaul.Pages
     {
         ProductHandler ProductoHandler;
         private XDocument xml = XDocument.Load("../../XML/XMLproductos.xml");
-        private ObservableCollection<Producto> listaFiltrada;
+        ObservableCollection<Producto> filterList;
 
         public ProductoGrid(ProductHandler productHandler)
         {
             InitializeComponent();
             this.ProductoHandler = productHandler;
+            this.filterList = new ObservableCollection<Producto>(productHandler.ProductList);
             UpdateProductList();
             InitTipoCategoria();
 
@@ -46,12 +47,12 @@ namespace PerfumeriaRaul.Pages
         private void InitTipoCategoria()
         {
             Tipocategory.Items.Add("Todas ...");
-            var listaCategoriasXML = xml.Root.Elements("Tipo").Attributes("idTipo");
+            var listaTipoXML = xml.Root.Elements("Tipo").Attributes("idTipo");
 
-            foreach (XAttribute categoriaXML in listaCategoriasXML)
+            foreach (XAttribute tipoXML in listaTipoXML)
             {
 
-                Tipocategory.Items.Add(categoriaXML.Value);
+                Tipocategory.Items.Add(tipoXML.Value);
             }
             Tipocategory.SelectedIndex = 0;
         }
@@ -61,13 +62,14 @@ namespace PerfumeriaRaul.Pages
             ProductoHandler.Actualizarxml();
             Tipocategory.SelectedIndex = 0;
             busquedaTextBox.Text = "";
-            listaFiltrada = new ObservableCollection<Producto>(ProductoHandler.ProductList);
+            this.filterList = new ObservableCollection<Producto>(ProductoHandler.ProductList);
             myDataGrid.ItemsSource = ProductoHandler.ProductList;
             myDataGrid.DataContext = ProductoHandler.ProductList;
             myDataGrid.Items.Refresh();
             
         }
 
+        
         private void TipoCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (Tipocategory.SelectedIndex == 0)
@@ -78,41 +80,42 @@ namespace PerfumeriaRaul.Pages
             }
             else
             {
-
-                listaFiltrada.Clear();
+                filterList.Clear();
+                
 
 
                 foreach (Producto product in ProductoHandler.ProductList)
                 {
 
-                    if (product.Envase.Equals((string)Tipocategory.SelectedItem))
+                    if (product.Tipo.Equals((string)Tipocategory.SelectedItem))
                     {
 
-                        listaFiltrada.Add(product);
+                        filterList.Add(product);
                     }
                 }
 
-                myDataGrid.ItemsSource = listaFiltrada;
-                myDataGrid.DataContext = listaFiltrada;
+                myDataGrid.ItemsSource = filterList;
+                myDataGrid.DataContext = filterList;
                 myDataGrid.Items.Refresh();
             }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ObservableCollection<Producto> nuevaListaFiltrada = new ObservableCollection<Producto>();
-            foreach (Producto product in listaFiltrada)
+            ObservableCollection<Producto> newFilterList = new ObservableCollection<Producto>();
+
+            foreach (Producto product in filterList)
             {
 
                 if (product.GetAllValues().Contains(busquedaTextBox.Text))
                 {
 
-                    nuevaListaFiltrada.Add(product);
+                    newFilterList.Add(product);
 
                 }
             }
-            myDataGrid.ItemsSource = nuevaListaFiltrada;
-            myDataGrid.DataContext = nuevaListaFiltrada;
+            myDataGrid.ItemsSource = newFilterList;
+            myDataGrid.DataContext = newFilterList;
             myDataGrid.Items.Refresh();
         }
 

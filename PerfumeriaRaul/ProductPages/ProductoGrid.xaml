@@ -9,7 +9,7 @@
       Title="ProductoGrid">
 
     <StackPanel>
-        <TextBlock Text="CONSULTA PRODUCTOS" HorizontalAlignment="Center" Margin="0,0,0,0" FontSize="22" FontWeight="Bold"/>
+        <TextBlock Text="CONSULTA PRODUCTOS" HorizontalAlignment="Center" Margin="0,10,0,30" FontSize="22" FontWeight="Bold"/>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Tipo: " Width="58" TextAlignment="Right"/>
             <ComboBox x:Name="Tipocategory" Width="199" SelectionChanged="TipoCombo_SelectionChanged"/>

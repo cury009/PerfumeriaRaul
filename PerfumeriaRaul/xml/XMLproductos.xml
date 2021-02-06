@@ -15,13 +15,15 @@
   </Tipo>
   <Tipo idTipo="Cuidado del cabello">
     <Marca nombre="Tresemme" />
-    <Marca nombre="HS" />
+    <Marca nombre="HS">
+      <Articulo Referencia="36" Descripcion="33cl" Envase="botella de plastico" Precio="5" Fecha="2021-01-25T00:00:00" Stock="2" />
+    </Marca>
     <Marca nombre="Joshons Baby" />
     <Marca nombre="Deliphus" />
     <Marca nombre="Granier" />
     <Marca nombre="Pantene" />
   </Tipo>
-  <Tipo idCTipo="Cuidado e higiene Facial">
+  <Tipo idTipo="Cuidado e higiene Facial">
     <Marca nombre="Gel de afeitar Gillete" />
     <Marca nombre="Crema de afeitar LEA" />
     <Marca nombre="Cuchillas Gillete" />
@@ -36,6 +38,6 @@
     <Marca nombre="Esparadrapo Deliphus" />
     <Marca nombre="Termometro Deliphus" />
     <Marca nombre="Gel de manos Deliphus" />
-    <Marca nombre="Gel de afeitar Gillete" />
+    
   </Tipo>
 </Mercadona>

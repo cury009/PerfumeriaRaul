@@ -12,11 +12,12 @@
         <StackPanel.Resources>
             <Style TargetType="Button" BasedOn="{StaticResource menu}"/>
         </StackPanel.Resources>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="602" Height="40" Margin="40,10,0,10">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="772" Height="40" Margin="20,10,0,10">
             <Button Content="PRINCIPAL" Click="Button_ClickPrincipal" Width="133"/>
 
             <Button Content="NUEVO" Click="Button_ClickNuevo" Margin="0,8,0,7" Width="157"/>
-            <Button Content="CONSULTA" Click="Button_ClickConsulta" Margin="0,8,0,7" Width="150"/>
+            <Button Content="BUSCAR EN TABLA" Click="Button_ClickBuscarTabla" Margin="0,8,0,7" Width="150"/>
+            <Button Content="CONSULTA PRODUCTO" Click="Button_ClickConsultaProducto" Margin="0,8,0,7" Width="150"/>
             <Button Content="SALIR" Click="Button_ClickSalir" Margin="0,8,0,7" Width="169" />
         </StackPanel>
 

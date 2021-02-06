@@ -177,7 +177,7 @@ namespace PerfumeriaRaul.Pages
                 ComboMarca.Visibility = Visibility.Hidden;
                 textCategoria.Visibility = Visibility.Visible;
                 txtMarca.Visibility = Visibility.Visible;
-                checkCategoria.IsEnabled = true;
+                checkTipo.IsEnabled = true;
             }
             else
             {
@@ -185,7 +185,7 @@ namespace PerfumeriaRaul.Pages
                 ComboMarca.Visibility = Visibility.Visible;
                 TipoCategoria.Visibility = Visibility.Hidden;
                 txtMarca.Visibility = Visibility.Hidden;
-                checkCategoria.IsEnabled = false;
+                checkTipo.IsEnabled = false;
             }
         }
         private void checkMarca_Click(object sender, RoutedEventArgs e)
