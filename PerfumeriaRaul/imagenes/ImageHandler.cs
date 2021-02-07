@@ -36,10 +36,19 @@ namespace PerfumeriaRaul.imagenes
             LocalImageDBHandler.AddData_toDB(Referencia,EncodeImage(bitmapImage));
 
         }
+
+        public static BitmapImage LoadDefaultImage()
+        {
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri("/imagenes/DefectoImagen.jpg", UriKind.Relative);
+            bitmapImage.EndInit();
+            return bitmapImage;
+        }
         public static BitmapImage LoadImage(string Referencia)
         {
             byte [] ImageData = LocalImageDBHandler.GetDataFromDB(Referencia);
-            BitmapImage bitmapImage = new BitmapImage();
+            BitmapImage bitmapImage = LoadDefaultImage();
 
             if (ImageData!= null)
             {

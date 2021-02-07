@@ -169,6 +169,7 @@
     <Resource Include="XML\XMLproductos.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagenes\DefectoImagen.jpg" />
     <Content Include="ProyectDB\SqlData\LocalImages\LocalImagesDB\DB_Local_Images.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

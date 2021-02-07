@@ -69,6 +69,7 @@ namespace PerfumeriaRaul.Pages
             this.verify = false;
             producto = new Producto();
             this.productGrid.DataContext = producto;
+            myImage.Source = ImageHandler.LoadDefaultImage();
         }
 
         //constructor de modificar
@@ -117,10 +118,7 @@ namespace PerfumeriaRaul.Pages
                 //productoHandler.Modifyproduct(producto, pos);
                 XMLHandler.editarProducto(producto);
                 MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
-               /* if (nuevaImagen)
-                {
-                    ImageHandler.modifyImage(producto.Referencia, (BitmapImage)myImage.Source);
-                }*/
+                
 
 
             }
@@ -159,7 +157,11 @@ namespace PerfumeriaRaul.Pages
                             MessageBox.Show("se ha registrado correctamente");
                             Producto producto = new Producto(Referencia,  Envase,  Marca, Tipo,  Descripcion,  Precio,  fechaAlta, stock);
                             XMLHandler.addXMLProduct(producto);
-                            ImageHandler.AddImage(producto.Referencia, (BitmapImage)myImage.Source);
+                            if(nuevaImagen)
+                            {
+                                ImageHandler.AddImage(producto.Referencia, (BitmapImage)myImage.Source);
+                            }
+                            
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                             
                             break;
@@ -228,6 +230,7 @@ namespace PerfumeriaRaul.Pages
             if (bitmapImage != null)
             {
                 myImage.Source = bitmapImage;
+                nuevaImagen = true;
             }
 
         }
