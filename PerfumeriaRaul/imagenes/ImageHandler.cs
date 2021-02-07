@@ -1,6 +1,8 @@
 ﻿using Microsoft.Win32;
+using PerfumeriaRaul.ProyectDB.SqlData.LocalImages;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +30,30 @@ namespace PerfumeriaRaul.imagenes
             }
 
             return null;
+        }
+        public static void AddImage(string productRef, BitmapImage bitmapImage)
+        {
+            LocalImageDBHandler.AddData_toDB(productRef,EncodeImage(bitmapImage));
+
+        }
+        public static byte[] EncodeImage(BitmapImage bitmapImage)
+        {
+
+            byte[] imageByte;
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                encoder.Save(ms);
+                imageByte = ms.ToArray();
+            }
+            return imageByte;
+        }
+
+        internal static void AddImage(object productRef, BitmapImage source)
+        {
+            throw new NotImplementedException();
         }
     }
 }

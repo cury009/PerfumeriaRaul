@@ -8,6 +8,8 @@ namespace PerfumeriaRaul.ProductClass
 {
     public class Producto : ICloneable
     {
+        internal string productRef;
+
         public String Referencia { set; get; }
         public String Envase { set; get; }
         public String Marca { set; get; }

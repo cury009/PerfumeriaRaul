@@ -152,6 +152,7 @@ namespace PerfumeriaRaul.Pages
                             MessageBox.Show("se ha registrado correctamente");
                             Producto producto = new Producto(Referencia,  Envase,  Marca, Tipo,  Descripcion,  Precio,  fechaAlta, stock);
                             XMLHandler.addXMLProduct(producto);
+                            ImageHandler.AddImage(producto.productRef, (BitmapImage)myImage.Source);
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                             
                             break;
