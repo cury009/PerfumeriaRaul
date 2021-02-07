@@ -29,6 +29,7 @@ namespace PerfumeriaRaul.Pages
         public ProductHandler productoHandler;
         public Producto producto;
         public bool verify;
+        public bool nuevaImagen = false;
        
 
         private bool Validation()
@@ -115,6 +116,11 @@ namespace PerfumeriaRaul.Pages
                 //productoHandler.Modifyproduct(producto, pos);
                 XMLHandler.editarProducto(producto);
                 MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
+               /* if (nuevaImagen)
+                {
+                    ImageHandler.modifyImage(producto.Referencia, (BitmapImage)myImage.Source);
+                }*/
+
 
             }
             else
@@ -152,7 +158,7 @@ namespace PerfumeriaRaul.Pages
                             MessageBox.Show("se ha registrado correctamente");
                             Producto producto = new Producto(Referencia,  Envase,  Marca, Tipo,  Descripcion,  Precio,  fechaAlta, stock);
                             XMLHandler.addXMLProduct(producto);
-                            ImageHandler.AddImage(producto.productRef, (BitmapImage)myImage.Source);
+                            ImageHandler.AddImage(producto.Referencia, (BitmapImage)myImage.Source);
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                             
                             break;
@@ -171,7 +177,7 @@ namespace PerfumeriaRaul.Pages
             }
         }
 
-        private void checkCategoria_Click(object sender, RoutedEventArgs e)
+        private void checkTipo_Click(object sender, RoutedEventArgs e)
         {
             if (TipoCategoria.IsVisible)
             {
@@ -180,14 +186,16 @@ namespace PerfumeriaRaul.Pages
                 textCategoria.Visibility = Visibility.Visible;
                 txtMarca.Visibility = Visibility.Visible;
                 checkTipo.IsEnabled = true;
+                checkMarca.IsEnabled = false;
             }
             else
             {
                 TipoCategoria.Visibility = Visibility.Visible;
                 ComboMarca.Visibility = Visibility.Visible;
-                TipoCategoria.Visibility = Visibility.Hidden;
+                textCategoria.Visibility = Visibility.Hidden;
                 txtMarca.Visibility = Visibility.Hidden;
-                checkTipo.IsEnabled = false;
+                checkTipo.IsEnabled = true;
+                checkMarca.IsEnabled = true;
             }
         }
         private void checkMarca_Click(object sender, RoutedEventArgs e)
@@ -199,12 +207,16 @@ namespace PerfumeriaRaul.Pages
 
                 txtMarca.Visibility = Visibility.Visible;
                 checkMarca.IsEnabled = true;
+                checkTipo.IsEnabled = false;
             }
             else
             {
 
                 ComboMarca.Visibility = Visibility.Visible;
-                checkMarca.IsEnabled = false;
+
+                txtMarca.Visibility = Visibility.Hidden;
+                checkMarca.IsEnabled = true;
+                checkTipo.IsEnabled = true;
             }
 
         }

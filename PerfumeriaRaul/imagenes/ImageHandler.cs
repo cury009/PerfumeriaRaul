@@ -31,9 +31,9 @@ namespace PerfumeriaRaul.imagenes
 
             return null;
         }
-        public static void AddImage(string productRef, BitmapImage bitmapImage)
+        public static void AddImage(string Referencia, BitmapImage bitmapImage)
         {
-            LocalImageDBHandler.AddData_toDB(productRef,EncodeImage(bitmapImage));
+            LocalImageDBHandler.AddData_toDB(Referencia,EncodeImage(bitmapImage));
 
         }
         public static byte[] EncodeImage(BitmapImage bitmapImage)
@@ -51,9 +51,6 @@ namespace PerfumeriaRaul.imagenes
             return imageByte;
         }
 
-        internal static void AddImage(object productRef, BitmapImage source)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
