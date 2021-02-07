@@ -80,6 +80,7 @@ namespace PerfumeriaRaul.Pages
             this.productoHandler = productoHandler;
             this.producto = producto;
             this.productGrid.DataContext = producto;
+            myImage.Source = ImageHandler.LoadImage(producto.Referencia);
             this.verify = true;
 
         }

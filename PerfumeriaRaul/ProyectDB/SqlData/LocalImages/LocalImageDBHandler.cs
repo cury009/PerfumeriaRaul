@@ -19,7 +19,21 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.LocalImages
             imageAdapter.Update(dataSet);
 
         }
-
+        
+        public  static byte[] GetDataFromDB(string idImage)
+        {
+            byte[] imageData = null;
+            try
+            {
+                imageData = imageAdapter.GetImage(idImage).ElementAt(0).productImage;
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            
+            return imageData;
+        }
 
     }
 }

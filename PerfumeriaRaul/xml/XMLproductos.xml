@@ -2,33 +2,23 @@
 <Mercadona>
   <Tipo idTipo="Perfume y Colonia">
     <Marca nombre="Deliphus">
-      <Articulo Referencia="01" Descripcion="10 cl" Envase="Frasco de cristal" Precio="5" Fecha="2021-01-25T00:00:00" Stock="6" />
+      <Articulo Referencia="01" Descripcion="33cl" Envase="botella de plastico" Precio="1" Fecha="2021-02-07T00:00:00" Stock="20" />
     </Marca>
-    <Marca nombre="Nenuco">
-      <Articulo Referencia="01234" Descripcion="33 cl" Envase="botella de plastico" Precio="2" Fecha="2021-02-06T00:00:00" Stock="10" />
-    </Marca>
-    <Marca nombre="calvin Klein">
-      <Articulo Referencia="55555" Descripcion="33cl" Envase="Frasco de cristal" Precio="10" Fecha="2021-02-07T00:00:00" Stock="7" />
-    </Marca>
+    <Marca nombre="Nenuco" />
+    <Marca nombre="calvin Klein" />
     <Marca nombre="Adolfo Dominguez" />
     <Marca nombre="Carolina Herrera" />
     <Marca nombre="Pacha Ibiza" />
     <Marca nombre="Shakira" />
     <Marca nombre="Invictus" />
-    <Marca nombre="One Million">
-      <Articulo Referencia="444444" Descripcion="33cl" Envase="Frasco de cristal" Precio="10" Fecha="2021-02-07T00:00:00" Stock="7" />
-    </Marca>
+    <Marca nombre="One Million" />
   </Tipo>
   <Tipo idTipo="Cuidado del cabello">
     <Marca nombre="Tresemme" />
-    <Marca nombre="HS">
-      <Articulo Referencia="36" Descripcion="33cl" Envase="botella de plastico" Precio="5" Fecha="2021-01-25T00:00:00" Stock="2" />
-    </Marca>
+    <Marca nombre="HS" />
     <Marca nombre="Joshons Baby" />
     <Marca nombre="Deliphus" />
-    <Marca nombre="Granier">
-      <Articulo Referencia="444" Descripcion="33cl" Envase="botella de plastico" Precio="1" Fecha="2021-02-07T00:00:00" Stock="5" />
-    </Marca>
+    <Marca nombre="Granier" />
     <Marca nombre="Pantene" />
   </Tipo>
   <Tipo idTipo="Cuidado e higiene Facial">
