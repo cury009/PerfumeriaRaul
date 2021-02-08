@@ -159,7 +159,7 @@ namespace PerfumeriaRaul.Pages
                             XMLHandler.addXMLProduct(producto);
                             if(nuevaImagen)
                             {
-                                ImageHandler.AddImage(producto.Referencia, (BitmapImage)myImage.Source);
+                                ImageHandler.ModifyImage(producto.Referencia, (BitmapImage)myImage.Source);
                             }
                             
                             MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());

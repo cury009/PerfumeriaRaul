@@ -38,7 +38,9 @@
     <Marca nombre="Algodon Deliphus" />
     <Marca nombre="Agua Oxigenada Deliphus" />
     <Marca nombre="Esparadrapo Deliphus" />
-    <Marca nombre="Termometro Deliphus" />
+    <Marca nombre="Termometro Deliphus">
+      <Articulo Referencia="nuevo" Descripcion="digital" Envase="estuche" Precio="10" Fecha="2021-02-08T00:00:00" Stock="3" />
+    </Marca>
     <Marca nombre="Gel de manos Deliphus" />
   </Tipo>
 </Mercadona>

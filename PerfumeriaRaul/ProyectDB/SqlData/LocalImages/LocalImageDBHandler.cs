@@ -34,6 +34,27 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.LocalImages
             
             return imageData;
         }
+        public static void UpdateDataFromDB(string idImage, byte[] productImage)
+        {
+            byte[] dataImage = GetDataFromDB(idImage);
+
+            if( dataImage == null)
+            {
+                AddData_toDB(idImage, productImage);
+            }
+            else
+            {
+                imageAdapter.UpdateData(idImage, productImage);
+                imageAdapter.Update(dataSet);
+            }
+
+            
+        }
+        public static void RemoveDataFrom(string idImage)
+        {
+            imageAdapter.Delete(idImage);
+            imageAdapter.Update(dataSet);
+        }
 
     }
 }

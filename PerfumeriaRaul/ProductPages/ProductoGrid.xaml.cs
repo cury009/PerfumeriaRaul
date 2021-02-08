@@ -1,4 +1,5 @@
 ﻿using PerfumeriaRaul.ProductClass;
+using PerfumeriaRaul.ProyectDB.SqlData.LocalImages;
 using PerfumeriaRaul.xml;
 using System;
 using System.Collections.Generic;
@@ -130,6 +131,7 @@ namespace PerfumeriaRaul.Pages
         {
             Producto product = (Producto)myDataGrid.SelectedItem;
             XMLHandler.RemoveProducto(product);
+            LocalImageDBHandler.RemoveDataFrom(product.Referencia);
             UpdateProductList();
         }
 
