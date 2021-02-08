@@ -20,7 +20,14 @@
         <DataGrid x:Name="myDataGrid" Margin="5,30,5,0" Height="250" ColumnWidth="*" IsReadOnly="True"
                   CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True"
                   ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
-            <DataGrid.Columns>
+            <DataGrid.Columns >
+                <DataGridTemplateColumn Header="Imagen">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Width="30" Height="30" Source="{Binding Path=imagen}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Referencia" Binding="{Binding Path=Referencia}"/>
                 <DataGridTextColumn Header="Tipo" Binding="{Binding Path=Tipo}"/>
                 <DataGridTextColumn Header="Descripcion"  Binding="{Binding Path=Descripcion}"/>

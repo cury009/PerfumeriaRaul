@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace PerfumeriaRaul.ProductClass
 {
@@ -23,6 +24,7 @@ namespace PerfumeriaRaul.ProductClass
         public float Precio { set; get; }
 
         public DateTime FechaAlta { set; get; }
+        public BitmapImage imagen { set; get; }
 
         public int Stock { set; get; }
 

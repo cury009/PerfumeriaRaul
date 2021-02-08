@@ -4,12 +4,8 @@
     <Marca nombre="Deliphus">
       <Articulo Referencia="01" Descripcion="33cl" Envase="botella de plastico" Precio="1" Fecha="2021-02-07T00:00:00" Stock="20" />
     </Marca>
-    <Marca nombre="Nenuco">
-      <Articulo Referencia="02" Descripcion="33cl" Envase="botella de plastico" Precio="2" Fecha="2021-02-07T00:00:00" Stock="3" />
-    </Marca>
-    <Marca nombre="calvin Klein">
-      <Articulo Referencia="03" Descripcion="33cl" Envase="Frasco de cristal" Precio="10" Fecha="2021-02-07T00:00:00" Stock="3" />
-    </Marca>
+    <Marca nombre="Nenuco" />
+    <Marca nombre="calvin Klein" />
     <Marca nombre="Adolfo Dominguez" />
     <Marca nombre="Carolina Herrera" />
     <Marca nombre="Pacha Ibiza" />

@@ -1,4 +1,5 @@
-﻿using PerfumeriaRaul.xml;
+﻿using PerfumeriaRaul.imagenes;
+using PerfumeriaRaul.xml;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -36,6 +37,11 @@ namespace PerfumeriaRaul.ProductClass
             public void Actualizarxml()
             {
                 this.ProductList = XMLHandler.LoadProductos();
+                
+                foreach(Producto producto in ProductList)
+            {
+                producto.imagen = ImageHandler.LoadImage(producto.Referencia);
+            }
             }
         
     }

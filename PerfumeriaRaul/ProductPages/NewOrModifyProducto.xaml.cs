@@ -1,5 +1,6 @@
 ﻿using PerfumeriaRaul.imagenes;
 using PerfumeriaRaul.ProductClass;
+using PerfumeriaRaul.ProyectDB.SqlData.LocalImages;
 using PerfumeriaRaul.xml;
 using System;
 using System.Collections.Generic;
@@ -117,6 +118,7 @@ namespace PerfumeriaRaul.Pages
             {
                 //productoHandler.Modifyproduct(producto, pos);
                 XMLHandler.editarProducto(producto);
+                ImageHandler.ModifyImage(producto.Referencia,(BitmapImage) myImage.Source);
                 MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                 
 
