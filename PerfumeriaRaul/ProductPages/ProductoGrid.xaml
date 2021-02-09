@@ -54,7 +54,7 @@
                 <DataGridTemplateColumn Header="Publicar">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="PUBLICAR" Background="Black" Click="Button_ClickBorrar"/>
+                            <Button Content="PUBLICAR" Background="Black" Click="Button_ClickPublicar" Foreground="White"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

@@ -94,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>projectdbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProyectDB\ProjectDB\RemoteProducts\RemoteProductsDBHandler.cs" />
     <Compile Include="ProyectDB\SqlData\LocalImages\LocalImageDBHandler.cs" />
     <Compile Include="ProyectDB\SqlData\LocalImages\LocalImagesDataSet\DataSet_Local_Images.Designer.cs">
       <AutoGen>True</AutoGen>

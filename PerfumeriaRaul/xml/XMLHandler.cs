@@ -88,6 +88,7 @@ namespace PerfumeriaRaul.xml
             new XAttribute("Precio", producto.Precio),
             new XAttribute("Fecha", producto.FechaAlta),
             new XAttribute("Stock", producto.Stock));
+            new XAttribute("Publish", producto.publish);
             xmlModelo.Add(xmlProducto);
         }
 
@@ -109,6 +110,7 @@ namespace PerfumeriaRaul.xml
                 
                 producto.FechaAlta = DateTime.Parse(productoxml.Attribute("Fecha").Value);
                 producto.Stock = int.Parse(s: productoxml.Attribute("Stock").Value);
+                producto.publish = bool.Parse(productoxml.Attribute("Publish").Value);
                 productiList.Add(producto);
 
             }

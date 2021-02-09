@@ -9,15 +9,11 @@ namespace PerfumeriaRaul.ProductClass
 {
     public class Producto : ICloneable
     {
-        internal string productRef;
-
         public String Referencia { set; get; }
         public String Envase { set; get; }
         public String Marca { set; get; }
 
         public String Tipo { set; get; }
-
-        
         
         public String Descripcion { set; get;  }
 
@@ -28,16 +24,20 @@ namespace PerfumeriaRaul.ProductClass
 
         public int Stock { set; get; }
 
-        public Producto(string referencia, string envase, string marca, string tipo,  string descripcion, float precio, DateTime fechaAlta, int stock) : this(referencia, envase)
+        public bool publish { set; get; }
+
+        public Producto(string referencia, string envase, string marca, string tipo,  string descripcion, float precio, DateTime fechaAlta, int stock)
         {
-            Referencia = referencia;
-            Envase = envase;
-            Marca = marca;
-            Tipo = tipo;
-            Descripcion = descripcion;
-            Precio = precio;
-            FechaAlta = fechaAlta;
-            Stock = stock;
+            this.Referencia = referencia;
+            this.Envase = envase;
+            this.Marca = marca;
+            this.Tipo = tipo;
+            this.Descripcion = descripcion;
+            this.Precio = precio;
+            this.FechaAlta = fechaAlta;
+            this.Stock = stock;
+            this.publish = false;
+
         }
 
         public Producto(string referencia, string tipo)
@@ -50,6 +50,7 @@ namespace PerfumeriaRaul.ProductClass
             this.Precio = 0.0f;
             this.Stock = 0;
             this.FechaAlta = DateTime.Now;
+            this.publish = false;
         }
 
         public Producto()
@@ -62,6 +63,7 @@ namespace PerfumeriaRaul.ProductClass
             this.Precio = 0.0f;
             this.Stock = 0;
             this.FechaAlta = DateTime.Now;
+            this.publish = false;
         }
 
         public override string ToString()

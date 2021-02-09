@@ -1,4 +1,5 @@
 ﻿using PerfumeriaRaul.ProductClass;
+using PerfumeriaRaul.ProyectDB.ProjectDB.RemoteProducts;
 using PerfumeriaRaul.ProyectDB.SqlData.LocalImages;
 using PerfumeriaRaul.xml;
 using System;
@@ -133,6 +134,27 @@ namespace PerfumeriaRaul.Pages
             XMLHandler.RemoveProducto(product);
             LocalImageDBHandler.RemoveDataFrom(product.Referencia);
             UpdateProductList();
+        }
+        private void Button_ClickPublicar(object sender, RoutedEventArgs e)
+        {
+            Producto product = (Producto)myDataGrid.SelectedItem;
+            if(product.publish == false)
+            {
+                //RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
+                RemoteProductsDBHandler.AddData_toDB(product);
+                product.publish = true;
+                
+            }
+            else
+            {
+
+                RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
+                product.publish = false;
+               
+            }
+            XMLHandler.editarProducto(product);
+            UpdateProductList();
+
         }
 
         private void Button_ClickActualizar(object sender, RoutedEventArgs e)
