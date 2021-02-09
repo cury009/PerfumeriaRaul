@@ -37,21 +37,43 @@
                 <DataGridTextColumn Header="Fecha Alta" Binding="{Binding Path=FechaAlta}"/>
                 <DataGridTextColumn Header="Stock" Binding="{Binding Path=Stock}"/>
 
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Modificar">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Editar" Background="Green" Click="Button_ClickModificar"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Borrar">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Borrar" Background="Red" Click="Button_ClickBorrar"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Publicar">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="PUBLICAR" Background="Black" Click="Button_ClickBorrar"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="30">
+                    <DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell }">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding publish}" Value="true">
+                                    <Setter Property="Background" Value="#FF50E824" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding publish}" Value="false">
+                                    <Setter Property="Background" Value="Gray" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTemplateColumn.CellStyle>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
+            
 
         </DataGrid>
 
