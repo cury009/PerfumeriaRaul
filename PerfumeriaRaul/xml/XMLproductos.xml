@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mercadona>
   <Tipo idTipo="Perfume y Colonia">
-    <Marca nombre="Deliphus"></Marca>
-    <Marca nombre="Nenuco" />
-    <Marca nombre="calvin Klein" />
-    <Marca nombre="Adolfo Dominguez">
-      <Articulo Referencia="01" Descripcion="33cl" Envase="Frasco de cristal" Precio="3" Fecha="2021-02-09T00:00:00" Stock="10" />
+    <Marca nombre="Deliphus">
+      <Articulo Referencia="01" Descripcion="33cl" Envase="botella de plastico" Precio="1" Fecha="2021-02-09T00:00:00" Stock="1" publish="true" />
     </Marca>
+    <Marca nombre="Nenuco">
+      <Articulo Referencia="02" Descripcion="1L" Envase="botella de plastico" Precio="2" Fecha="2021-02-09T00:00:00" Stock="10" publish="true" />
+    </Marca>
+    <Marca nombre="calvin Klein" />
+    <Marca nombre="Adolfo Dominguez" />
     <Marca nombre="Carolina Herrera" />
     <Marca nombre="Pacha Ibiza" />
     <Marca nombre="Shakira" />
@@ -14,7 +16,9 @@
     <Marca nombre="One Million" />
   </Tipo>
   <Tipo idTipo="Cuidado del cabello">
-    <Marca nombre="Tresemme" />
+    <Marca nombre="Tresemme">
+      <Articulo Referencia="03" Descripcion="2 botellas de 1 L" Envase="paquete de plastico" Precio="5" Fecha="2021-02-09T00:00:00" Stock="3" publish="false" />
+    </Marca>
     <Marca nombre="HS"></Marca>
     <Marca nombre="Joshons Baby" />
     <Marca nombre="Deliphus" />
@@ -24,13 +28,15 @@
   <Tipo idTipo="Cuidado e higiene Facial">
     <Marca nombre="Gel de afeitar Gillete" />
     <Marca nombre="Crema de afeitar LEA"></Marca>
-    <Marca nombre="Cuchillas Gillete"></Marca>
-    <Marca nombre="Discos Desmaquillantes Deliphus" />
+    <Marca nombre="Cuchillas Gillete" />
+    <Marca nombre="Discos Desmaquillantes Deliphus">
+      <Articulo Referencia="04" Descripcion="10 unidades" Envase="paquete de plastico" Precio="3" Fecha="2021-02-09T00:00:00" Stock="4" publish="false" />
+    </Marca>
   </Tipo>
   <Tipo idTipo="Parafarmacia">
     <Marca nombre="Tiritas Deliphus" />
     <Marca nombre="Mascarillas Higienicas No ReutilizablesDeliphus" />
-    <Marca nombre="Alochol Deliphus" />
+    <Marca nombre="Alochol Deliphus"></Marca>
     <Marca nombre="Algodon Deliphus" />
     <Marca nombre="Agua Oxigenada Deliphus" />
     <Marca nombre="Esparadrapo Deliphus"></Marca>

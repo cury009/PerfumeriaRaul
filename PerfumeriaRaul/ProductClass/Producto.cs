@@ -40,7 +40,7 @@ namespace PerfumeriaRaul.ProductClass
 
         }
 
-        public Producto(string referencia, string tipo)
+        /*public Producto(string referencia, string tipo)
         {
             this.Referencia = "";
             this.Envase = "";
@@ -51,7 +51,7 @@ namespace PerfumeriaRaul.ProductClass
             this.Stock = 0;
             this.FechaAlta = DateTime.Now;
             this.publish = false;
-        }
+        }*/
 
         public Producto()
         {

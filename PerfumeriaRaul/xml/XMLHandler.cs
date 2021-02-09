@@ -81,14 +81,14 @@ namespace PerfumeriaRaul.xml
 
         public static void crearProducto()
         {
-            XElement xmlProducto = new XElement("Articulo", 
+            XElement xmlProducto = new XElement("Articulo",
             new XAttribute("Referencia", producto.Referencia),
             new XAttribute("Descripcion", producto.Descripcion),
             new XAttribute("Envase", producto.Envase),
             new XAttribute("Precio", producto.Precio),
             new XAttribute("Fecha", producto.FechaAlta),
-            new XAttribute("Stock", producto.Stock));
-            new XAttribute("Publish", producto.publish);
+            new XAttribute("Stock", producto.Stock),
+            new XAttribute("publish", producto.publish));
             xmlModelo.Add(xmlProducto);
         }
 
@@ -107,10 +107,9 @@ namespace PerfumeriaRaul.xml
                 producto.Envase = productoxml.Attribute("Envase").Value;
                 producto.Descripcion = productoxml.Attribute("Descripcion").Value;
                 producto.Precio = float.Parse(productoxml.Attribute("Precio").Value);
-                
                 producto.FechaAlta = DateTime.Parse(productoxml.Attribute("Fecha").Value);
-                producto.Stock = int.Parse(s: productoxml.Attribute("Stock").Value);
-                producto.publish = bool.Parse(productoxml.Attribute("Publish").Value);
+                producto.Stock = int.Parse(productoxml.Attribute("Stock").Value);
+                producto.publish = bool.Parse(productoxml.Attribute("publish").Value);
                 productiList.Add(producto);
 
             }
