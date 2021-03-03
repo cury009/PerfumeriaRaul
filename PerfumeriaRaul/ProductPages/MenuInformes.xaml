@@ -13,7 +13,7 @@
             <TextBlock Text="MENU FACTURAS" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="20"/>
         </StackPanel>
         <StackPanel Width="200">
-            <Button  Content="CREAR INFORME"/>
+            <Button  Content="CREAR INFORME" Click="Button_Click_4"/>
             <Button  Content="CONSULTAR FACTURAS" Margin="0,10,0,0" Click="Button_Click" />
         </StackPanel>
         <StackPanel x:Name="menu" Margin="10" Width="600">

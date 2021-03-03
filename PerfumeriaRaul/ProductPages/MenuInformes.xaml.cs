@@ -22,7 +22,7 @@ namespace PerfumeriaRaul.ProductPages
     public partial class MenuInformes : Page
     {
         ProductHandler productHandler;
-        public MenuInformes()
+        public MenuInformes(ProductHandler productHandler)
         {
             InitializeComponent();
             menu.Visibility = Visibility.Hidden;
@@ -57,6 +57,11 @@ namespace PerfumeriaRaul.ProductPages
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             panelFacturas.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MainWindow.myNavigationFrame.NavigationService.Navigate(new Factura(productHandler));
         }
     }
 }

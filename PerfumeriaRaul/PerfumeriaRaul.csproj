@@ -110,6 +110,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Imagenes\ImageHandler.cs" />
+    <Compile Include="ProductClass\ProductF.cs" />
+    <Compile Include="ProductPages\Factura.xaml.cs">
+      <DependentUpon>Factura.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProductPages\MenuInformes.xaml.cs">
       <DependentUpon>MenuInformes.xaml</DependentUpon>
     </Compile>
@@ -152,6 +156,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProductPages\Factura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ProductPages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

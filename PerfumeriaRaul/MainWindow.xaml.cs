@@ -77,7 +77,7 @@ namespace PerfumeriaRaul
 
         private void Button_ClickInforme(object sender, RoutedEventArgs e)
         {
-            myNavigationFrame.NavigationService.Navigate(new MenuInformes());
+            myNavigationFrame.NavigationService.Navigate(new MenuInformes(productHandler));
         }
     }
 }
