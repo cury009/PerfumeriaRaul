@@ -2,24 +2,40 @@
 <Mercadona>
   <Tipo idTipo="Perfume y Colonia">
     <Marca nombre="Deliphus">
-      <Articulo Referencia="01" Descripcion="33cl" Envase="botella de plastico" Precio="1" Fecha="2021-02-09T00:00:00" Stock="1" publish="true" />
+      <Articulo Referencia="11" Descripcion="botella" Envase="Bote de lata" Precio="2" Fecha="2021-02-22T00:00:00" Stock="100" publish="true" />
     </Marca>
     <Marca nombre="Nenuco">
-      <Articulo Referencia="02" Descripcion="1L" Envase="botella de plastico" Precio="2" Fecha="2021-02-09T00:00:00" Stock="10" publish="true" />
+      <Articulo Referencia="12" Descripcion="botella" Envase="botella de plastico" Precio="2" Fecha="2021-02-22T00:00:00" Stock="200" publish="true" />
     </Marca>
-    <Marca nombre="calvin Klein" />
-    <Marca nombre="Adolfo Dominguez" />
-    <Marca nombre="Carolina Herrera" />
-    <Marca nombre="Pacha Ibiza" />
-    <Marca nombre="Shakira" />
-    <Marca nombre="Invictus"></Marca>
-    <Marca nombre="One Million" />
+    <Marca nombre="calvin Klein">
+      <Articulo Referencia="13" Descripcion="33cl" Envase="Frasco de cristal" Precio="7" Fecha="2021-02-22T00:00:00" Stock="25" publish="true" />
+    </Marca>
+    <Marca nombre="Adolfo Dominguez">
+      <Articulo Referencia="14" Descripcion="33cl" Envase="Frasco de cristal" Precio="4" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
+    </Marca>
+    <Marca nombre="Carolina Herrera">
+      <Articulo Referencia="15" Descripcion="33cl" Envase="Frasco de cristal" Precio="5" Fecha="2021-02-22T00:00:00" Stock="50000" publish="true" />
+    </Marca>
+    <Marca nombre="Pacha Ibiza">
+      <Articulo Referencia="16" Descripcion="33cl" Envase="Frasco de cristal" Precio="3" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
+    </Marca>
+    <Marca nombre="Shakira">
+      <Articulo Referencia="17" Descripcion="33cl" Envase="Frasco de cristal" Precio="4" Fecha="2021-02-22T00:00:00" Stock="60" publish="true" />
+    </Marca>
+    <Marca nombre="Invictus">
+      <Articulo Referencia="18" Descripcion="33cl" Envase="Frasco de cristal" Precio="70" Fecha="2021-02-22T00:00:00" Stock="20" publish="true" />
+    </Marca>
+    <Marca nombre="One Million">
+      <Articulo Referencia="19" Descripcion="33cl" Envase="Frasco de cristal" Precio="60" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
+    </Marca>
   </Tipo>
   <Tipo idTipo="Cuidado del cabello">
     <Marca nombre="Tresemme">
-      <Articulo Referencia="03" Descripcion="2 botellas de 1 L" Envase="paquete de plastico" Precio="5" Fecha="2021-02-09T00:00:00" Stock="3" publish="false" />
+      <Articulo Referencia="21" Descripcion="33cl" Envase="botella de plastico" Precio="2" Fecha="2021-02-22T00:00:00" Stock="40" publish="true" />
     </Marca>
-    <Marca nombre="HS"></Marca>
+    <Marca nombre="HS">
+      <Articulo Referencia="22" Descripcion="33cl" Envase="botella de plastico" Precio="3" Fecha="2021-02-22T00:00:00" Stock="80" publish="true" />
+    </Marca>
     <Marca nombre="Joshons Baby" />
     <Marca nombre="Deliphus" />
     <Marca nombre="Granier" />
@@ -29,9 +45,7 @@
     <Marca nombre="Gel de afeitar Gillete" />
     <Marca nombre="Crema de afeitar LEA"></Marca>
     <Marca nombre="Cuchillas Gillete" />
-    <Marca nombre="Discos Desmaquillantes Deliphus">
-      <Articulo Referencia="04" Descripcion="10 unidades" Envase="paquete de plastico" Precio="3" Fecha="2021-02-09T00:00:00" Stock="4" publish="false" />
-    </Marca>
+    <Marca nombre="Discos Desmaquillantes Deliphus" />
   </Tipo>
   <Tipo idTipo="Parafarmacia">
     <Marca nombre="Tiritas Deliphus" />

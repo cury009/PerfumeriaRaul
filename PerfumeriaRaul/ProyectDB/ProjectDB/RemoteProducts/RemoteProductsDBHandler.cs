@@ -17,7 +17,7 @@ namespace PerfumeriaRaul.ProyectDB.ProjectDB.RemoteProducts
 
         public static void AddData_toDB(Producto producto )
         {
-            publshrsTableAdapter.Insert(producto.Referencia, producto.Tipo, producto.Marca, producto.Envase, producto.Descripcion, producto.Precio, producto.FechaAlta, producto.Stock, producto.imagen);
+            publshrsTableAdapter.Insert(producto.Referencia, producto.Tipo, producto.Marca, producto.Envase, producto.Descripcion, producto.Precio, producto.FechaAlta, producto.Stock, ImageHandler.EncodeImage(producto.imagen));
             publshrsTableAdapter.Update(dataSet);
 
         }
@@ -29,10 +29,10 @@ namespace PerfumeriaRaul.ProyectDB.ProjectDB.RemoteProducts
         }
         public static void ActualizarToProjectDB(Producto producto)
         {
-            byte[] imagen = ImageHandler.EncodeImage(producto.imagen);
+            
             float precio = producto.Precio;
             decimal Precio = Convert.ToDecimal(precio);
-            publshrsTableAdapter.ActualizarToProjectDB(producto.Referencia, producto.Tipo, producto.Marca, producto.Envase, producto.Descripcion, Precio, producto.FechaAlta, producto.Stock, imagen);
+            publshrsTableAdapter.ActualizarToProjectDB(producto.Referencia, producto.Tipo, producto.Marca, producto.Envase, producto.Descripcion, Precio, producto.FechaAlta, producto.Stock, ImageHandler.EncodeImage(producto.imagen));
             
         }
     }

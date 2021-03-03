@@ -1,5 +1,7 @@
 ﻿using PerfumeriaRaul.Pages;
 using PerfumeriaRaul.ProductClass;
+using PerfumeriaRaul.ProductPages;
+using PerfumeriaRaul.Reporting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +44,7 @@ namespace PerfumeriaRaul
             myNavigationFrame.NavigationService.Navigate(new MainPage());
             
         }
-
+        
         private void Button_ClickPrincipal(object sender, RoutedEventArgs e)
         {
             myNavigationFrame.NavigationService.Navigate(new MainPage());
@@ -71,6 +73,11 @@ namespace PerfumeriaRaul
         {
             productHandler.Actualizarxml();
             myNavigationFrame.NavigationService.Navigate(new ProductoShow(productHandler));
+        }
+
+        private void Button_ClickInforme(object sender, RoutedEventArgs e)
+        {
+            myNavigationFrame.NavigationService.Navigate(new MenuInformes());
         }
     }
 }

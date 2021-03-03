@@ -1,0 +1,41 @@
+﻿<Page x:Class="PerfumeriaRaul.ProductPages.MenuInformes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PerfumeriaRaul.ProductPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MenuInformes">
+
+    <StackPanel Background="White">
+        <StackPanel>
+            <TextBlock Text="MENU FACTURAS" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="20"/>
+        </StackPanel>
+        <StackPanel Width="200">
+            <Button  Content="CREAR INFORME"/>
+            <Button  Content="CONSULTAR FACTURAS" Margin="0,10,0,0" Click="Button_Click" />
+        </StackPanel>
+        <StackPanel x:Name="menu" Margin="10" Width="600">
+            <Button  Content="POR CIF/DNI" Width="200" Click="Button_Click_1"/>
+            <StackPanel x:Name="panelCIF" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <TextBox Width="200"/>
+                <Button Content="ACEPTAR" Margin="20,0,0,0"/>
+            </StackPanel>
+            <Button  Content="POR FECHAS" Width="200" Margin="0,10" Click="Button_Click_2"/>
+            <StackPanel x:Name="panelFechas" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <DatePicker x:Name="fechaInicio" Width="200" />
+                <DatePicker x:Name="fechaFin" Width="200" Margin="20,0,0,0"/>
+                <Button Content="ACEPTAR" Margin="20,0,0,0"/>
+            </StackPanel>
+            <Button  Content="POR Nº FACTURA" Width="200" Margin="0,10" Click="Button_Click_3"/>
+            <StackPanel x:Name="panelFacturas" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <TextBox Width="200"/>
+                <Button Content="ACEPTAR" Margin="20,0,0,0"/>
+            </StackPanel>
+
+        </StackPanel>
+
+
+    </StackPanel>
+</Page>

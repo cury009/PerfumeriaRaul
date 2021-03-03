@@ -132,6 +132,7 @@ namespace PerfumeriaRaul.Pages
         {
             Producto product = (Producto)myDataGrid.SelectedItem;
             XMLHandler.RemoveProducto(product);
+            RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
             LocalImageDBHandler.RemoveDataFrom(product.Referencia);
             UpdateProductList();
         }
