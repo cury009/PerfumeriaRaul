@@ -73,7 +73,7 @@ namespace PerfumeriaRaul.ProductClass
 
         public override string ToString()
         {
-            return Referencia;
+            return "Referencia: " + Referencia + "; Tipo: " + Tipo + "; Marca:" + Marca + "; Descripcion: " +Descripcion  + "; Envase: " + Envase ;
         }
 
         public object Clone()
