@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -109,8 +109,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ProductClass\Cliente.cs" />
+    <Compile Include="ProyectDB\SqlData\Facturacion\FacturaDS\facturaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>facturaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Imagenes\ImageHandler.cs" />
-    <Compile Include="ProductClass\ProductF.cs" />
     <Compile Include="ProductPages\Factura.xaml.cs">
       <DependentUpon>Factura.xaml</DependentUpon>
     </Compile>
@@ -129,15 +134,17 @@
       <DependentUpon>projectdbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ProyectDB\ProjectDB\RemoteProducts\RemoteProductsDBHandler.cs" />
+    <Compile Include="ProyectDB\SqlData\Facturacion\FacturaDBHandler.cs" />
     <Compile Include="ProyectDB\SqlData\LocalImages\LocalImageDBHandler.cs" />
     <Compile Include="ProyectDB\SqlData\LocalImages\LocalImagesDataSet\DataSet_Local_Images.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Local_Images.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reporting\ReportViewer.xaml.cs">
-      <DependentUpon>ReportViewer.xaml</DependentUpon>
+    <Compile Include="Reporting\ReportPreview.xaml.cs">
+      <DependentUpon>ReportPreview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReportsData\Client.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="XML\XMLHandler.cs" />
     <Page Include="Dictionaries\MyStyles.xaml">
@@ -180,7 +187,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Reporting\ReportViewer.xaml">
+    <Page Include="Reporting\ReportPreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,7 +218,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\InformeMatricula.rdlc" />
+    <None Include="ProyectDB\SqlData\Facturacion\FacturaDS\facturaDataSet.xsc">
+      <DependentUpon>facturaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectDB\SqlData\Facturacion\FacturaDS\facturaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>facturaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectDB\SqlData\Facturacion\FacturaDS\facturaDataSet.xss">
+      <DependentUpon>facturaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="ProyectDB\ProjectDB\RemoteProducts\RemoteProductsDataSet\projectdbDataSet.xsc">
       <DependentUpon>projectdbDataSet.xsd</DependentUpon>
@@ -250,6 +267,13 @@
     <Resource Include="XML\XMLproductos.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ProyectDB\SqlData\Facturacion\FactruasDB\factura.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProyectDB\SqlData\Facturacion\FactruasDB\factura_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>factura.mdf</DependentUpon>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -284,5 +308,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

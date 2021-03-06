@@ -24,6 +24,8 @@ namespace PerfumeriaRaul.ProductPages
     {
         ProductHandler productHandler;
         ObservableCollection<Producto> listaProductosF;
+        Producto producto;
+
 
         public Factura(ProductHandler productHandler)
         {
@@ -34,15 +36,29 @@ namespace PerfumeriaRaul.ProductPages
             tablaProductos.ItemsSource = listaProductosF;
 
         }
-
-        
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Producto producto = (Producto)cmb_productos.SelectedItem;
+                       
             listaProductosF.Add(producto);
+            cmb_productos.SelectedIndex = -1;
+            if(listaProductosF.Count >0)
+            {
+                foreach (var p in listaProductosF)
+                {
+                    if (p.Referencia == producto.Referencia)
+                    {
+                        p.Cantidad = p.Cantidad + int.Parse(txt_cantidad.Text);
+                    }
+                }
+            }
+            
         }
 
-        
+        private void cmb_productos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            producto = (Producto)cmb_productos.SelectedItem;
+            txt_cantidad.DataContext = producto;
+            
+        }
     }
 }

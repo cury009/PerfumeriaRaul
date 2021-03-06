@@ -20,6 +20,7 @@ namespace PerfumeriaRaul.ProductClass
         public float Precio { set; get; }
 
         public DateTime FechaAlta { set; get; }
+        public int Cantidad { get; set; }
         public BitmapImage imagen { set; get; }
 
         public int Stock { set; get; }
@@ -40,6 +41,7 @@ namespace PerfumeriaRaul.ProductClass
 
         }
 
+        
         /*public Producto(string referencia, string tipo)
         {
             this.Referencia = "";
@@ -63,7 +65,10 @@ namespace PerfumeriaRaul.ProductClass
             this.Precio = 0.0f;
             this.Stock = 0;
             this.FechaAlta = DateTime.Now;
+            this.Cantidad = 1;
+
             this.publish = false;
+
         }
 
         public override string ToString()

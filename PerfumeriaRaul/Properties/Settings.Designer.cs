@@ -45,5 +45,16 @@ namespace PerfumeriaRaul.Properties {
                 return ((string)(this["projectdbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\ProyectDB\\Sql" +
+            "Data\\Facturacion\\FactruasDB\\factura.mdf;Integrated Security=True")]
+        public string facturaConnectionString {
+            get {
+                return ((string)(this["facturaConnectionString"]));
+            }
+        }
     }
 }
