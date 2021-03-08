@@ -1,5 +1,7 @@
-﻿using PerfumeriaRaul.ProductClass;
+﻿using PerfumeriaRaul.Pages;
+using PerfumeriaRaul.ProductClass;
 using PerfumeriaRaul.ProyectDB.SqlData.Facturacion;
+using PerfumeriaRaul.Reporting;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -44,7 +46,7 @@ namespace PerfumeriaRaul.ProductPages
         {
             bool productoR = false;
             
-            cmb_productos.SelectedIndex = -1;
+            
             if(producto != null)
             {
                 foreach (Producto p in listaProductosF)
@@ -78,6 +80,26 @@ namespace PerfumeriaRaul.ProductPages
             {
                 FacturaDBHandler.AddClient(cliente);
                 FacturaDBHandler.AddFactura(cliente, listaProductosF, txt_nFactura.Text);
+                MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
+                ReportPreview report = new ReportPreview();
+                string factura = txt_nFactura.Text;
+                if (txt_nFactura.Text != "")
+                {
+                    bool okConsulta = report.GetCrearFactura(factura);
+                    if (okConsulta)
+                    {
+                        report.Show(); 
+                    } 
+                    else 
+                    {
+                        System.Windows.MessageBox.Show("no se ha encontrado el registro por factura"); 
+                    }
+
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("es necesario insertar por una factura");
+                }
             }
         }
     }

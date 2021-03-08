@@ -30,11 +30,29 @@ namespace PerfumeriaRaul.Reporting
         public bool GetFacturaCIF(string cif)
         {
             bool okConsulta = false;
-            DataTable tablaInforme = FacturaDBHandler.GetCif(cif);
+            DataTable tablaInforme = FacturaDBHandler.GetCIF(cif);
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataFactura";
+            rds.Name = "DatosFactura";
             rds.Value = tablaInforme;
-            myReportView.LocalReport.ReportPath = "../../Informes/Factura.rdlc";
+            myReportView.LocalReport.ReportPath = "../../Informes/CrearFactura.rdlc";
+            myReportView.LocalReport.DataSources.Add(rds);
+            myReportView.RefreshReport();
+            if (tablaInforme.Rows.Count > 0)
+            {
+                okConsulta = true;
+            }
+
+
+            return okConsulta;
+        }
+        public bool GetCrearFactura(string factura)
+        {
+            bool okConsulta = false;
+            DataTable tablaInforme = FacturaDBHandler.GetFacturas(factura);
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "DatosFactura";
+            rds.Value = tablaInforme;
+            myReportView.LocalReport.ReportPath = "../../informes/CrearFactura.rdlc";
             myReportView.LocalReport.DataSources.Add(rds);
             myReportView.RefreshReport();
             if (tablaInforme.Rows.Count > 0)

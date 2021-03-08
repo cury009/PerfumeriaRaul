@@ -33,7 +33,7 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.Facturacion
             }
             
         }
-        public static DataTable GetCif(string cif)
+        public static DataTable GetCIF(string cif)
         {
             return adapter.GetDataByCIF(cif);
         }

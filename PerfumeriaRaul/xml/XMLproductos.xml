@@ -2,39 +2,39 @@
 <Mercadona>
   <Tipo idTipo="Perfume y Colonia">
     <Marca nombre="Deliphus">
-      <Articulo Referencia="11" Descripcion="botella" Envase="Bote de lata" Precio="2" Fecha="2021-02-22T00:00:00" Stock="100" publish="true" />
+      <Articulo Referencia="11" Descripcion="perfume deliphus" Envase="Bote de lata" Precio="2" Fecha="2021-02-22T00:00:00" Stock="100" publish="true" />
     </Marca>
     <Marca nombre="Nenuco">
-      <Articulo Referencia="12" Descripcion="botella" Envase="botella de plastico" Precio="2" Fecha="2021-02-22T00:00:00" Stock="200" publish="true" />
+      <Articulo Referencia="12" Descripcion="perfume nenuco" Envase="botella de plastico" Precio="2" Fecha="2021-02-22T00:00:00" Stock="200" publish="true" />
     </Marca>
     <Marca nombre="calvin Klein">
-      <Articulo Referencia="13" Descripcion="33cl" Envase="Frasco de cristal" Precio="7" Fecha="2021-02-22T00:00:00" Stock="25" publish="true" />
+      <Articulo Referencia="13" Descripcion="perfume calvin klein" Envase="Frasco de cristal" Precio="7" Fecha="2021-02-22T00:00:00" Stock="25" publish="true" />
     </Marca>
     <Marca nombre="Adolfo Dominguez">
-      <Articulo Referencia="14" Descripcion="33cl" Envase="Frasco de cristal" Precio="4" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
+      <Articulo Referencia="14" Descripcion="perfume aodolfo dominguez" Envase="Frasco de cristal" Precio="4" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
     </Marca>
     <Marca nombre="Carolina Herrera">
-      <Articulo Referencia="15" Descripcion="33cl" Envase="Frasco de cristal" Precio="5" Fecha="2021-02-22T00:00:00" Stock="50000" publish="true" />
+      <Articulo Referencia="15" Descripcion="perfume Carolina Herrera" Envase="Frasco de cristal" Precio="5" Fecha="2021-02-22T00:00:00" Stock="50000" publish="true" />
     </Marca>
     <Marca nombre="Pacha Ibiza">
-      <Articulo Referencia="16" Descripcion="33cl" Envase="Frasco de cristal" Precio="3" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
+      <Articulo Referencia="16" Descripcion="perfuem pacha ibiza" Envase="Frasco de cristal" Precio="3" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
     </Marca>
     <Marca nombre="Shakira">
-      <Articulo Referencia="17" Descripcion="33cl" Envase="Frasco de cristal" Precio="4" Fecha="2021-02-22T00:00:00" Stock="60" publish="true" />
+      <Articulo Referencia="17" Descripcion="perfume shakira" Envase="Frasco de cristal" Precio="4" Fecha="2021-02-22T00:00:00" Stock="60" publish="true" />
     </Marca>
     <Marca nombre="Invictus">
-      <Articulo Referencia="18" Descripcion="33cl" Envase="Frasco de cristal" Precio="70" Fecha="2021-02-22T00:00:00" Stock="20" publish="true" />
+      <Articulo Referencia="18" Descripcion="perfume Invictus" Envase="Frasco de cristal" Precio="70" Fecha="2021-02-22T00:00:00" Stock="20" publish="true" />
     </Marca>
     <Marca nombre="One Million">
-      <Articulo Referencia="19" Descripcion="33cl" Envase="Frasco de cristal" Precio="60" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
+      <Articulo Referencia="19" Descripcion="perfume one million" Envase="Frasco de cristal" Precio="60" Fecha="2021-02-22T00:00:00" Stock="50" publish="true" />
     </Marca>
   </Tipo>
   <Tipo idTipo="Cuidado del cabello">
     <Marca nombre="Tresemme">
-      <Articulo Referencia="21" Descripcion="33cl" Envase="botella de plastico" Precio="2" Fecha="2021-02-22T00:00:00" Stock="40" publish="true" />
+      <Articulo Referencia="21" Descripcion="pack 2 tresemme" Envase="botella de plastico" Precio="2" Fecha="2021-02-22T00:00:00" Stock="40" publish="true" />
     </Marca>
     <Marca nombre="HS">
-      <Articulo Referencia="22" Descripcion="33cl" Envase="botella de plastico" Precio="3" Fecha="2021-02-22T00:00:00" Stock="80" publish="true" />
+      <Articulo Referencia="22" Descripcion="hs" Envase="botella de plastico" Precio="3" Fecha="2021-02-22T00:00:00" Stock="80" publish="true" />
     </Marca>
     <Marca nombre="Joshons Baby" />
     <Marca nombre="Deliphus" />
