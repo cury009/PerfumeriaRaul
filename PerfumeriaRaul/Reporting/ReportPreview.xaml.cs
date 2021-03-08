@@ -65,7 +65,7 @@ namespace PerfumeriaRaul.Reporting
         }
         public bool GetInformeFecha(String fecha1, String fecha2)
         {
-            DataTable informe = FacturaDBHandler.GetFechas(fecha1, fecha2);
+            DataTable informe = FacturaDBHandler.GetFechasFactura(fecha1, fecha2);
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DatosFechas";
             rds.Value = informe;

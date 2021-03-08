@@ -16,9 +16,10 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.Facturacion
         public static clienteTableAdapter clienteAdapter = new clienteTableAdapter();
         public static facturaTableAdapter facturaAdapter = new facturaTableAdapter();
         public static informesTableAdapter adapter = new informesTableAdapter();
-        private static producto_facturaTableAdapter detalleAdapter = new producto_facturaTableAdapter();
+        public static fechasFacturasTableAdapter fechas_adapter = new fechasFacturasTableAdapter();
+        public static producto_facturaTableAdapter detalleAdapter = new producto_facturaTableAdapter();
         
-        private static facturaDataSet  facturaDataSet = new facturaDataSet();
+        public static facturaDataSet  facturaDataSet = new facturaDataSet();
 
         public static void AddClient (Cliente client)
         {
@@ -40,6 +41,10 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.Facturacion
         public static DataTable GetFechas(string fecha1, string fecha2)
         {
             return adapter.GetDataByFecha(fecha1, fecha2);
+        }
+        public static DataTable GetFechasFactura(string fecha1, string fecha2)
+        {
+            return fechas_adapter.GetFacturasFechas(fecha1, fecha2);
         }
         public static DataTable GetFacturas(string refFactura)
         {
