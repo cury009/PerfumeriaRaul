@@ -1,4 +1,5 @@
 ﻿using PerfumeriaRaul.ProductClass;
+using PerfumeriaRaul.Reporting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,6 +63,29 @@ namespace PerfumeriaRaul.ProductPages
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             MainWindow.myNavigationFrame.NavigationService.Navigate(new Factura(productHandler));
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            ReportPreview report = new ReportPreview();
+            string cif = txb_cif.Text;
+
+            if (cif != "")
+            {
+                bool okConsulta = report.GetFacturaCIF(cif);
+                if(okConsulta)
+                {
+                    report.Show();
+                }
+                else {
+                    MessageBox.Show("No se han econtrado registro para el CIF");
+                    txb_cif.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Es necesario escribir un CIF de cliente");
+            }
         }
     }
 }

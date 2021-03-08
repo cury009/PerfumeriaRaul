@@ -1,5 +1,9 @@
-﻿using System;
+﻿
+using Microsoft.Reporting.WinForms;
+using PerfumeriaRaul.ProyectDB.SqlData.Facturacion;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +14,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PerfumeriaRaul.Reporting
@@ -18,11 +21,29 @@ namespace PerfumeriaRaul.Reporting
     /// <summary>
     /// Lógica de interacción para ReportPreview.xaml
     /// </summary>
-    public partial class ReportPreview : Page
+    public partial class ReportPreview : Window
     {
         public ReportPreview()
         {
             InitializeComponent();
+        }
+        public bool GetFacturaCIF(string cif)
+        {
+            bool okConsulta = false;
+            DataTable tablaInforme = FacturaDBHandler.GetCif(cif);
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "DataFactura";
+            rds.Value = tablaInforme;
+            myReportView.LocalReport.ReportPath = "../../Informes/Factura.rdlc";
+            myReportView.LocalReport.DataSources.Add(rds);
+            myReportView.RefreshReport();
+            if (tablaInforme.Rows.Count > 0)
+            {
+                okConsulta = true;
+            }
+
+
+            return okConsulta;
         }
     }
 }

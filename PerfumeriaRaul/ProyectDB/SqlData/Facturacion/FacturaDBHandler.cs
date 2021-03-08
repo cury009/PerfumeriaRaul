@@ -24,7 +24,7 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.Facturacion
         {
             clienteAdapter.Insert(client.cif, client.nombre, client.direccion);
         }
-        public static void AddFactrua(Cliente cliente, ObservableCollection<Producto> listaProducto, string refFactura)
+        public static void AddFactura(Cliente cliente, ObservableCollection<Producto> listaProducto, string refFactura)
         {
             facturaAdapter.Insert(refFactura, cliente.cif, DateTime.Today.Date);
             foreach (Producto producto in listaProducto)

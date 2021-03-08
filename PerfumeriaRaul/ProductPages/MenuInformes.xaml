@@ -19,8 +19,8 @@
         <StackPanel x:Name="menu" Margin="10" Width="600">
             <Button  Content="POR CIF/DNI" Width="200" Click="Button_Click_1"/>
             <StackPanel x:Name="panelCIF" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
-                <TextBox Width="200"/>
-                <Button Content="ACEPTAR" Margin="20,0,0,0"/>
+                <TextBox x:Name="txb_cif" Width="200"/>
+                <Button Content="ACEPTAR" Margin="20,0,0,0" Click="Button_Click_5"/>
             </StackPanel>
             <Button  Content="POR FECHAS" Width="200" Margin="0,10" Click="Button_Click_2"/>
             <StackPanel x:Name="panelFechas" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
