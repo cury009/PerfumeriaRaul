@@ -1484,15 +1484,6 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.Facturacion.FacturaDS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public informesRow FindBycifrefFacturarefProducto(string cif, string refFactura, string refProducto) {
-                return ((informesRow)(this.Rows.Find(new object[] {
-                            cif,
-                            refFactura,
-                            refProducto})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 informesDataTable cln = ((informesDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1540,10 +1531,6 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.Facturacion.FacturaDS {
                 base.Columns.Add(this.columnprecio);
                 this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncif,
-                                this.columnrefFactura,
-                                this.columnrefProducto}, true));
                 this.columncif.AllowDBNull = false;
                 this.columncif.MaxLength = 100;
                 this.columnnombre.MaxLength = 200;

@@ -87,5 +87,53 @@ namespace PerfumeriaRaul.ProductPages
                 MessageBox.Show("Es necesario escribir un CIF de cliente");
             }
         }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            if (fechaInicio.Text != "" && fechaFin.Text != "")
+            {
+                string fechainicio = fechaInicio.Text;
+                string fechafin = fechaFin.Text;
+                ReportPreview report = new ReportPreview();
+                bool okConsulta = report.GetInformeFecha(fechainicio, fechafin);
+
+                if (okConsulta)
+                {
+                    report.Show();
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("No existen registros para las fechas seleccionadas");
+                }
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Selecciona Fecha Inicio y Fecha Fin");
+
+            }
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            ReportPreview report = new ReportPreview();
+            string factura = numeroFactura.Text;
+            if (numeroFactura.Text != "")
+            {
+                bool okConsulta = report.GetCrearFactura(factura);
+                if (okConsulta) 
+                {
+                    report.Show(); 
+                }
+                else 
+                { 
+                    System.Windows.MessageBox.Show("no se ha encontrado el registro por factura"); 
+                }
+
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("es necesario insertar por una factura");
+            }
+        }
     }
 }

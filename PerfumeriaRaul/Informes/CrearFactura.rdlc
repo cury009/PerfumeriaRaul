@@ -29,6 +29,25 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
+                <Value>CIF:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!cif.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
                 <Value>NOMBRE:</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
@@ -64,7 +83,7 @@
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>0.42236cm</Top>
         <Left>0.52599cm</Left>
-        <Height>2.00229cm</Height>
+        <Height>2.3107cm</Height>
         <Width>9.11458cm</Width>
         <Style>
           <Border>
@@ -532,7 +551,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Direccion:  Calle Valencia, 5, </Value>
+                  <Value>Direccion:  Calle Valencia, 5</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -543,7 +562,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>CP: 46016 ,</Value>
+                  <Value>CP: 46016 </Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>

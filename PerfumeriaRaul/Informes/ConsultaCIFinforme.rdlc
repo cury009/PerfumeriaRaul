@@ -21,7 +21,26 @@
             <TextRuns>
               <TextRun>
                 <Value />
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>CIF/DNI: </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!cif.Value</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -341,7 +360,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Direccion:  Calle Valencia, 5, </Value>
+                  <Value>Direccion:  Calle Valencia, 5</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -352,7 +371,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>CP: 46016 ,</Value>
+                  <Value>CP: 46016 </Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>

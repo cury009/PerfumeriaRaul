@@ -32,9 +32,9 @@ namespace PerfumeriaRaul.Reporting
             bool okConsulta = false;
             DataTable tablaInforme = FacturaDBHandler.GetCIF(cif);
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DatosFactura";
+            rds.Name = "DatosConsultaCIF";
             rds.Value = tablaInforme;
-            myReportView.LocalReport.ReportPath = "../../Informes/CrearFactura.rdlc";
+            myReportView.LocalReport.ReportPath = "../../Informes/ConsultaCIFinforme.rdlc";
             myReportView.LocalReport.DataSources.Add(rds);
             myReportView.RefreshReport();
             if (tablaInforme.Rows.Count > 0)
@@ -61,6 +61,23 @@ namespace PerfumeriaRaul.Reporting
             }
 
 
+            return okConsulta;
+        }
+        public bool GetInformeFecha(String fecha1, String fecha2)
+        {
+            DataTable informe = FacturaDBHandler.GetFechas(fecha1, fecha2);
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "DatosFechas";
+            rds.Value = informe;
+            myReportView.LocalReport.ReportPath = "../../Informes/InformeFechas.rdlc";
+            myReportView.LocalReport.DataSources.Add(rds);
+            myReportView.RefreshReport();
+
+            bool okConsulta = false;
+            if (informe.Rows.Count > 0)
+            {
+                okConsulta = true;
+            }
             return okConsulta;
         }
     }
