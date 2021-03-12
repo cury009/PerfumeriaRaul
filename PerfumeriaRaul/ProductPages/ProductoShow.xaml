@@ -8,9 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProductoShow">
 
-    <StackPanel Background="White">
+    <StackPanel Background="{StaticResource backgroundMain}">
 
-        <TextBlock Text="CONSULTAR PRODUCTO" HorizontalAlignment="Center"  FontSize="22" FontWeight="Bold" Margin="100,20"/>
+        <TextBlock Text="CONSULTAR PRODUCTO" HorizontalAlignment="Center"  FontSize="22" FontWeight="Bold" Margin="100,20" Foreground="#FFD787"/>
         <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=ProductList}" Margin="237,5,212,5" SelectionChanged="comboProduct_SelectionChanged" />
         <Grid x:Name="ProductoDataGrid" Margin="84,0,33,0" Height="266" Background="White">
             <Grid.ColumnDefinitions>

@@ -8,18 +8,20 @@
         Title="MainWindow" Height="630" Width="850">
 
 
-    <StackPanel Background="white">
+    <StackPanel Background="{StaticResource backgroundMain}">
         <StackPanel.Resources>
+            
             <Style TargetType="Button" BasedOn="{StaticResource menu}"/>
+            
         </StackPanel.Resources>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="782" Height="40" Margin="10,10,0,10">
-            <Button Content="PRINCIPAL" Click="Button_ClickPrincipal" Width="162" Margin="0,8,0,7"/>
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Width="600" Margin="20" >
+            <Button Content="PRINCIPAL" Click="Button_ClickPrincipal" Margin="0,0,10,0" Width="100" />
 
-            <Button Content="NUEVO" Click="Button_ClickNuevo" Margin="0,8,0,7" Width="124"/>
-            <Button Content="BUSCAR EN TABLA" Click="Button_ClickBuscarTabla" Margin="0,8,0,7" Width="151"/>
+            <Button Content="NUEVO" Click="Button_ClickNuevo" Margin="0,0,10,0" Width="100"/>
+            <Button Content="BUSCAR EN TABLA" Click="Button_ClickBuscarTabla" Margin="0,0,10,0"  Width="161"/>
             <!--<Button Content="CONSULTA PRODUCTO" Click="Button_ClickConsultaProducto" Margin="0,8,0,7" Width="159"/>-->
-            <Button Content="INFORME" Click="Button_ClickInforme" Margin="0,8,0,7" Width="152"/>
-            <Button Content="SALIR" Click="Button_ClickSalir" Margin="0,8,0,7" Width="169" />
+            <Button Content="INFORME" Click="Button_ClickInforme" Margin="0,0,10,0" Width="100"/>
+            <Button Content="SALIR" Click="Button_ClickSalir"  Margin="0,0,10,0" Width="100"  />
         </StackPanel>
 
         <Frame x:Name="myFrame" Margin="20,10,20,10" NavigationUIVisibility="Hidden" Height="500" Width="800"/>

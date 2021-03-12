@@ -8,28 +8,29 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Factura">
 
-    <StackPanel Background="White">
-        <TextBlock Text="CREAR FACTURA" Margin="10" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
-        <TextBlock Text="Nº FACTURA" HorizontalAlignment="Center"/>
-        <TextBox x:Name="txt_nFactura" Width="200"/>
-        <TextBlock Text="DATOS DEL CLIENTE" HorizontalAlignment="Center" Margin="10"/>
+    <StackPanel Background="{StaticResource backgroundMain}">
+        <TextBlock Text="CREAR FACTURA" Margin="10" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+        <TextBlock Text="Nº FACTURA" HorizontalAlignment="Center" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+        <TextBox x:Name="txt_nFactura" Width="200" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+        <TextBlock Text="DATOS DEL CLIENTE" HorizontalAlignment="Center" Margin="10" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
         <WrapPanel x:Name="datosCliente" HorizontalAlignment="Center">
-            <TextBlock Text="CIF: "/>
+            <TextBlock Text="CIF: " Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
             <TextBox Width="150" Text="{Binding Path=cif}"/>
-            <TextBlock Text="NOMBRE: " />
+            <TextBlock Text="NOMBRE: " Foreground="#FFD787" FontFamily="Perpetua Titling Mt" />
             <TextBox Width="200" Text="{Binding Path=nombre}"/>
-            <TextBlock Text="DIRECCION: "/>
-            <TextBox Width="250" Text="{Binding Path=direccion}"/>
+            <TextBlock Text="DIRECCION: " Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+            <TextBox Width="250" Text="{Binding Path=direccion}" />
         </WrapPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
             <TextBox x:Name="txt_cantidad" Text="{Binding Path=Cantidad}" Width="60" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <ComboBox x:Name="cmb_productos" Margin="5,0,0,0" Width="344" SelectionChanged="cmb_productos_SelectionChanged"/>
-            <Button Content="AÑADIR" Margin="5,0,0,0" Click="Button_Click" />
+            <Button Content="AÑADIR" Margin="5,0,0,0" Click="Button_Click"  Background="#FFD787" FontFamily="Perpetua Titling Mt"/>
         </StackPanel>
 
         <DataGrid x:Name="tablaProductos" Margin="126,10,149,0" Height="184" ColumnWidth="*" IsReadOnly="True"
                   CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True"
-                  ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  FontFamily="Perpetua Titling Mt">
             <DataGrid.Columns>
 
                 <DataGridTextColumn Width="60" Header="Cantidad" Binding="{Binding Path=Cantidad}"/>
@@ -44,6 +45,6 @@
 
 
         </DataGrid>
-        <Button Content="CREAR" Margin="300,10" Width="200" Height="34" Click="Button_Click_1"/>
+        <Button Content="CREAR" Margin="300,10" Width="200" Height="34" Click="Button_Click_1"  Background="#FFD787" FontFamily="Perpetua Titling Mt"/>
     </StackPanel>
 </Page>

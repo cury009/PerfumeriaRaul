@@ -8,32 +8,32 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MenuInformes">
 
-    <StackPanel Background="White">
+    <StackPanel Background="{StaticResource backgroundMain}">
         <StackPanel>
-            <TextBlock Text="MENU FACTURAS" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="20"/>
+            <TextBlock Text="MENU FACTURAS" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="20" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
         </StackPanel>
         <StackPanel Width="200">
-            <Button  Content="CREAR INFORME" Click="Button_Click_4"/>
-            <Button  Content="CONSULTAR FACTURAS" Margin="0,10,0,0" Click="Button_Click" />
+            <Button  Content="CREAR INFORME" Click="Button_Click_4" Background="#FFD787" FontFamily="Perpetua Titling Mt"/>
+            <Button  Content="CONSULTAR FACTURAS" Margin="0,10,0,0" Click="Button_Click"  Background="#FFD787" FontFamily="Perpetua Titling Mt" />
         </StackPanel>
         <StackPanel x:Name="menu" Margin="46,10,45,10" Height="246">
-            <Button  Content="POR CIF/DNI" Width="200" Click="Button_Click_1"/>
+            <Button  Content="POR CIF/DNI" Width="200" Click="Button_Click_1" Background="#FFD787" FontFamily="Perpetua Titling Mt"/>
             <StackPanel x:Name="panelCIF" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
                 <TextBox x:Name="txb_cif" Width="200"/>
-                <Button Content="ACEPTAR" Margin="20,0,0,0" Click="Button_Click_5"/>
+                <Button Content="ACEPTAR" Margin="20,0,0,0" Click="Button_Click_5" Background="#FFD787" FontFamily="Perpetua Titling Mt"/>
             </StackPanel>
-            <Button  Content="POR FECHAS" Width="200" Margin="0,10" Click="Button_Click_2"/>
+            <Button  Content="POR FECHAS" Width="200" Margin="0,10" Click="Button_Click_2" Background="#FFD787" FontFamily="Perpetua Titling Mt"/>
             <StackPanel x:Name="panelFechas" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
-                <TextBlock Text="fecha inicio" Margin="0,0,10,0"/>
+                <TextBlock Text="fecha inicio" Margin="0,0,10,0" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
                 <DatePicker x:Name="fechaInicio" Width="200" />
-                <TextBlock Text="fecha fin" Margin="20,0,0,0"/>
+                <TextBlock Text="fecha fin" Margin="20,0,0,0" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
                 <DatePicker x:Name="fechaFin" Width="200" Margin="20,0,0,0"/>
-                <Button Content="ACEPTAR" Margin="20,0,0,0" Click="Button_Click_6"/>
+                <Button Content="ACEPTAR" Margin="20,0,0,0" Click="Button_Click_6" Background="#FFD787" FontFamily="Perpetua Titling Mt"/>
             </StackPanel>
-            <Button  Content="POR Nº FACTURA" Width="200" Margin="0,10" Click="Button_Click_3"/>
+            <Button  Content="POR Nº FACTURA" Width="200" Margin="0,10" Click="Button_Click_3" Background="#FFD787" FontFamily="Perpetua Titling Mt" />
             <StackPanel x:Name="panelFacturas" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
                 <TextBox Width="200" x:Name="numeroFactura"/>
-                <Button Content="ACEPTAR" Margin="20,0,0,0" Click="Button_Click_7"/>
+                <Button Content="ACEPTAR" Margin="20,0,0,0" Click="Button_Click_7" Background="#FFD787" FontFamily="Perpetua Titling Mt" />
             </StackPanel>
 
         </StackPanel>

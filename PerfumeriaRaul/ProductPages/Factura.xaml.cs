@@ -76,24 +76,34 @@ namespace PerfumeriaRaul.ProductPages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if(listaProductosF.Count>0 && txt_nFactura.Text != "" && cliente!=null) 
+            if (listaProductosF.Count > 0 && txt_nFactura.Text != "" && cliente != null)
             {
                 FacturaDBHandler.AddClient(cliente);
-                FacturaDBHandler.AddFactura(cliente, listaProductosF, txt_nFactura.Text);
-                MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
-                ReportPreview report = new ReportPreview();
-                string factura = txt_nFactura.Text;
-                if (txt_nFactura.Text != "")
+                bool okFactura = FacturaDBHandler.AddFactura(cliente, listaProductosF, txt_nFactura.Text);
+
+
+                if (okFactura)
                 {
-                    bool okConsulta = report.GetCrearFactura(factura);
-                    if (okConsulta)
+                    MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
+                    ReportPreview report = new ReportPreview();
+                    string factura = txt_nFactura.Text;
+                    if (txt_nFactura.Text != "")
                     {
-                        report.Show(); 
-                    } 
-                    else 
-                    {
-                        System.Windows.MessageBox.Show("no se ha encontrado el registro por factura"); 
+                        bool okConsulta = report.GetCrearFactura(factura);
+                        if (okConsulta)
+                        {
+                            report.Show();
+                        }
+                        else
+                        {
+                            System.Windows.MessageBox.Show("no se ha encontrado el registro por factura");
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("no se ha  podido cargar la factura");
+                    }
+
 
                 }
                 else

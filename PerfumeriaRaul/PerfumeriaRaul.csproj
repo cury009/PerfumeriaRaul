@@ -264,12 +264,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\perfurmeriaMercadona.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="XML\XMLproductos.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagenes\background.png" />
+    <Resource Include="Imagenes\perfumeMercadona.png" />
     <Content Include="ProyectDB\SqlData\Facturacion\FactruasDB\factura.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

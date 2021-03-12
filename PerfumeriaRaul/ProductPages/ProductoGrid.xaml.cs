@@ -162,6 +162,8 @@ namespace PerfumeriaRaul.Pages
         {
             UpdateProductList();
         }
+
+        
     }
 }
 

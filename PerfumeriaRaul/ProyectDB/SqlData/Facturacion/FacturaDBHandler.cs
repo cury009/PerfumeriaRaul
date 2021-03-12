@@ -21,17 +21,36 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.Facturacion
         
         public static facturaDataSet  facturaDataSet = new facturaDataSet();
 
-        public static void AddClient (Cliente client)
+        public static bool AddClient (Cliente client)
         {
-            clienteAdapter.Insert(client.cif, client.nombre, client.direccion);
-        }
-        public static void AddFactura(Cliente cliente, ObservableCollection<Producto> listaProducto, string refFactura)
-        {
-            facturaAdapter.Insert(refFactura, cliente.cif, DateTime.Today.Date);
-            foreach (Producto producto in listaProducto)
+            try
             {
-                detalleAdapter.Insert(producto.Referencia, refFactura, producto.Cantidad, producto.Precio,producto.Descripcion);
+                clienteAdapter.Insert(client.cif, client.nombre, client.direccion);
+                return false;  
             }
+            catch
+            {
+                return true;
+            }
+            
+        }
+        public static bool AddFactura(Cliente cliente, ObservableCollection<Producto> listaProducto, string refFactura)
+
+        {
+            try
+            {
+                facturaAdapter.Insert(refFactura, cliente.cif, DateTime.Today.Date);
+                foreach (Producto producto in listaProducto)
+                {
+                    detalleAdapter.Insert(producto.Referencia, refFactura, producto.Cantidad, producto.Precio, producto.Descripcion);
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            
             
         }
         public static DataTable GetCIF(string cif)

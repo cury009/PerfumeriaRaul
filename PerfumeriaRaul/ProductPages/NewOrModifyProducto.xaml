@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PerfumeriaRaul.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       
       Title="NewOrModifyProducto">
 
-    <StackPanel Background="White" Margin="0,0,-82,-35">
-        <Grid Height="490">
+    <StackPanel Background="{StaticResource backgroundMain}" Margin="0,0,-82,-35">
+        <Grid Height="534">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -20,37 +20,48 @@
                 <RowDefinition Height="325*"/>
                 <RowDefinition Height="114*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="nuevoProducto" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="NUEVO PRODUCTO" HorizontalAlignment="Center" Margin="30,10,30,10" FontSize="22" FontWeight="Bold" Width="230"/>
-            <Grid   Grid.Column="0" Grid.Row="1" x:Name="productGrid" Margin="35,10,35,3" Background="white" Visibility="Visible" >
+            <TextBlock x:Name="nuevoProducto"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="NUEVO PRODUCTO" HorizontalAlignment="Center" Margin="342,12,297,7" FontSize="22" FontWeight="Bold" Width="243" Foreground="#FFD787" FontFamily="Perpetua Titling Mt" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.188"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Grid   Grid.Column="0" Grid.Row="1" x:Name="productGrid" Margin="35,10,35,3"  Visibility="Visible" >
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="89*"/>
-                    <ColumnDefinition Width="205*"/>
                     <ColumnDefinition Width="102*"/>
+                    <ColumnDefinition Width="205*"/>
+                    <ColumnDefinition Width="64*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="19*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="39*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Referencia:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,10,9" Height="16" Width="58"/>
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Tipo:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,13,10,10" Height="16" Width="26" />
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Marca:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,10,9" Height="16" Width="35"/>
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Envase:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,13,10,10" Height="16" Width="39"/>
-                <TextBlock Grid.Row="4" Grid.Column="0" Text="Descripcion:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,10,9" Height="16" Width="64"/>
-                <TextBlock Grid.Row="5" Grid.Column="0" Text="Precio:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,10,9" Height="16" Width="35"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Referencia:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,10,9" Height="20" Width="92" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Tipo:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,9,10,10" Height="20" Width="90" Foreground="#FFD787"  FontFamily="Perpetua Titling Mt"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Marca:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,10,9" Height="20" Width="92" Foreground="#FFD787" FontFamily="Perpetua Titling Mt" Grid.RowSpan="2"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Envase:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,11,10,8" Height="20" Width="92" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Descripcion:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,10,7" Height="20" Width="92" Foreground="#FFD787" FontFamily="Perpetua Titling Mt" Grid.RowSpan="2"/>
+                <TextBlock Grid.Row="7" Grid.Column="0" Text="Precio:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,10,7" Height="20" Width="92" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
 
-                <TextBlock Grid.Row="6" Grid.Column="0" Text="Fecha de alta:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,0,9" Height="20" Width="74"/>
-                <TextBlock Grid.Row="7" Grid.Column="0" Text="stock:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,14,10,9" Height="16" Width="30"/>
+                <TextBlock Grid.Row="8" Grid.Column="0" Text="Fecha de alta:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,0,9" Height="20" Width="100" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+                <TextBlock Grid.Row="9" Grid.Column="0" Text="stock:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,12,10,7" Height="20" Width="92" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
 
                 <TextBox x:Name="txtReferencia" Text="{Binding Path=Referencia}" Margin="10,5" Grid.Row="0"  Grid.Column="1" VerticalContentAlignment="Center"/>
                 <ComboBox x:Name="TipoCategoria" Text="{Binding Path=Tipo}" Margin="10,5,10,0" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Height="22" VerticalAlignment="Top" SelectionChanged="txt_tipo_SelectionChanged"/>
                 <TextBox x:Name="textCategoria" Text="{Binding Path=Tipo}" Margin="10,5" Grid.Row="1" Grid.Column="1" Visibility="Hidden" VerticalContentAlignment="Center"/>
-                <ComboBox x:Name="EnvaseCombo" Grid.Row="3" Grid.Column="1" Margin="10,5" Text="{Binding Path=Envase}">
+                <ComboBox x:Name="EnvaseCombo" Grid.Row="4" Grid.Column="1" Margin="10,5" Text="{Binding Path=Envase}">
                     <ComboBoxItem Content="Frasco de cristal" IsSelected="True"/>
                     <ComboBoxItem Content="Bote de lata" />
                     <ComboBoxItem Content="paquete de plastico" />
@@ -58,24 +69,24 @@
                     <ComboBoxItem Content="botella de plastico" />
 
                 </ComboBox>
-                <ComboBox x:Name="ComboMarca" Text="{Binding Path=Marca}" Margin="10,5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"/>
-                <TextBox x:Name="txtMarca" Text="{Binding Path=Marca}" Margin="10,5" Grid.Row="2" Visibility="Hidden" Grid.Column="1" VerticalContentAlignment="Center"/>
-                <TextBox x:Name="txtDescripcion" Text="{Binding Path=Descripcion}" Margin="10,5" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center"/>
-                <TextBox x:Name="txtPrecio" Text="{Binding Path=Precio}" Margin="10,5" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center"/>
-                <DatePicker x:Name="txtFecha" SelectedDate="{Binding Path=FechaAlta}" Margin="10,5" Grid.Row="6" Grid.Column="1"/>
+                <ComboBox x:Name="ComboMarca" Text="{Binding Path=Marca}" Margin="10,5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+                <TextBox x:Name="txtMarca" Text="{Binding Path=Marca}" Margin="10,5" Grid.Row="2" Visibility="Hidden" Grid.Column="1" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+                <TextBox x:Name="txtDescripcion" Text="{Binding Path=Descripcion}" Margin="10,5" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+                <TextBox x:Name="txtPrecio" Text="{Binding Path=Precio}" Margin="10,5" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <DatePicker x:Name="txtFecha" SelectedDate="{Binding Path=FechaAlta}" Margin="10,7,0,11" Grid.Row="8" Grid.Column="1"/>
                 <CheckBox x:Name="checkTipo" Grid.Row="1" Grid.Column="2" Margin="5,10,0,0" Click="checkTipo_Click"/>
-                <CheckBox x:Name="checkMarca"  Grid.Row="2" Grid.Column="2" Margin="5,10,0,0" Click="checkMarca_Click" />
-                <TextBox x:Name="txtStock" Text="{Binding Path=Stock}" Margin="10,5" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <CheckBox x:Name="checkMarca"  Grid.Row="2" Grid.Column="2" Margin="5,10,0,0" Click="checkMarca_Click" Grid.RowSpan="2" />
+                <TextBox x:Name="txtStock" Text="{Binding Path=Stock}" Margin="10,5" Grid.Row="9" Grid.Column="1" VerticalContentAlignment="Center"/>
 
             </Grid>
             <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image x:Name="myImage" Margin="10" Height="200" Width="180" Stretch="Uniform"/>
-                <Button x:Name="addImageBtn" Content="Seleccionar imagen..." Click="addImageBtn_Click"/>
+                <Button x:Name="addImageBtn" Content="Seleccionar imagen..." Click="addImageBtn_Click" FontFamily="Perpetua Titling Mt" Background="#FFD787"/>
 
 
             </StackPanel>
             <Label   x:Name="label" Margin="216,20,215,0" HorizontalAlignment="Center" Foreground="#FFF30C0C"  Background="White" Visibility="Hidden" Width="10"/>
-            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,30,30,30" Content="ACEPTAR" Click="Button_Click"  Background="LightGreen" Width="300"/>
+            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,30,30,30" Content="ACEPTAR" Click="Button_Click"  Background="#FFD787" Width="300" Foreground="Black" FontFamily="Perpetua Titling Mt" />
 
         </Grid>
 
