@@ -11,7 +11,7 @@
     <StackPanel Background="{StaticResource backgroundMain}">
         <TextBlock Text="CREAR FACTURA" Margin="10" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
         <TextBlock Text="Nº FACTURA" HorizontalAlignment="Center" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
-        <TextBox x:Name="txt_nFactura" Width="200" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
+        <TextBox x:Name="txt_nFactura" Width="200"  FontFamily="Perpetua Titling Mt"/>
         <TextBlock Text="DATOS DEL CLIENTE" HorizontalAlignment="Center" Margin="10" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
         <WrapPanel x:Name="datosCliente" HorizontalAlignment="Center">
             <TextBlock Text="CIF: " Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
@@ -33,7 +33,7 @@
                   FontFamily="Perpetua Titling Mt">
             <DataGrid.Columns>
 
-                <DataGridTextColumn Width="60" Header="Cantidad" Binding="{Binding Path=Cantidad}"/>
+                <DataGridTextColumn Width="80" Header="Cantidad" Binding="{Binding Path=Cantidad}"/>
                 <DataGridTextColumn Width="80" Header="Referencia" Binding="{Binding Path=Referencia}"/>
                 <DataGridTextColumn Header="Descripcion"  Binding="{Binding Path=Descripcion}"/>
                 <DataGridTextColumn Width="60" Header="Precio" Binding="{Binding Path=Precio}"/>

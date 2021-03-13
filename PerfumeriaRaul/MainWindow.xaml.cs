@@ -66,7 +66,21 @@ namespace PerfumeriaRaul
 
         private void Button_ClickSalir(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            MessageBoxResult resultado=  MessageBox.Show("¿Desea Salir Realmente?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Information);          
+                   
+            switch (resultado)
+            {
+                case MessageBoxResult.Yes:
+                    this.Close();
+                    
+
+                    break;
+                case MessageBoxResult.No:
+                    break;
+                
+
+            }
+            
         }
 
         private void Button_ClickConsultaProducto(object sender, RoutedEventArgs e)

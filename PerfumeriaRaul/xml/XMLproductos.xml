@@ -30,12 +30,8 @@
     </Marca>
   </Tipo>
   <Tipo idTipo="Cuidado del cabello">
-    <Marca nombre="Tresemme">
-      <Articulo Referencia="21" Descripcion="pack 2 tresemme" Envase="botella de plastico" Precio="2" Fecha="2021-02-22T00:00:00" Stock="40" publish="true" />
-    </Marca>
-    <Marca nombre="HS">
-      <Articulo Referencia="22" Descripcion="hs" Envase="botella de plastico" Precio="3" Fecha="2021-02-22T00:00:00" Stock="80" publish="true" />
-    </Marca>
+    <Marca nombre="Tresemme" />
+    <Marca nombre="HS" />
     <Marca nombre="Joshons Baby" />
     <Marca nombre="Deliphus" />
     <Marca nombre="Granier" />
@@ -55,6 +51,8 @@
     <Marca nombre="Agua Oxigenada Deliphus" />
     <Marca nombre="Esparadrapo Deliphus"></Marca>
     <Marca nombre="Termometro Deliphus" />
-    <Marca nombre="Gel de manos Deliphus" />
+    <Marca nombre="Gel de manos Deliphus">
+      <Articulo Referencia="45" Descripcion="gel alcoholico" Envase="botella de plastico" Precio="3" Fecha="2021-03-13T00:00:00" Stock="3" publish="true" />
+    </Marca>
   </Tipo>
 </Mercadona>

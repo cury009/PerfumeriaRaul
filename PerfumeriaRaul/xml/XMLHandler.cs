@@ -16,10 +16,26 @@ namespace PerfumeriaRaul.xml
         private static XElement xmlCategoria;
         private static XElement xmlModelo;
 
-        private static void LoadXMl() { xml = XDocument.Load("../../XML/XMLproductos.xml"); }
+        private static void LoadXML() { xml = XDocument.Load("../../XML/XMLproductos.xml"); }
         private static void saveXML()
         {
             xml.Save("../../XML/XMLproductos.xml");
+        }
+
+        public static bool ExistsRef (string Referencia)
+        {
+            LoadXML();
+            bool existsRef = false;
+            foreach (var ReferenciaXML in xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo").Attributes())
+            {
+                if(ReferenciaXML.Value == Referencia)
+                {
+                    existsRef = true;
+                    break;
+                }
+                
+            } //fin del foreach
+            return existsRef;
         }
 
 
@@ -52,7 +68,7 @@ namespace PerfumeriaRaul.xml
         public static void addXMLProduct(Producto p)
         {
             producto = p;
-            LoadXMl();
+            LoadXML();
             AddTipo(p);
             addModelo();
             crearProducto();
@@ -95,7 +111,7 @@ namespace PerfumeriaRaul.xml
         public static ObservableCollection<Producto> LoadProductos()
         {
             ObservableCollection<Producto> productiList = new ObservableCollection<Producto>();
-            LoadXMl();
+            LoadXML();
             var listaProductos = xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo");
             foreach (XElement productoxml in listaProductos)
             {
@@ -118,7 +134,7 @@ namespace PerfumeriaRaul.xml
 
         public static void RemoveProducto(Producto p)
         {
-            LoadXMl();
+            LoadXML();
             var listaProductos = xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo").Attributes("Referencia");
 
             foreach (XAttribute referencia in listaProductos)
@@ -134,7 +150,7 @@ namespace PerfumeriaRaul.xml
 
         public static void editarProducto(Producto p)
         {
-            LoadXMl();
+            LoadXML();
             var listaProductos = xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo").Attributes("Referencia");
 
             foreach (XAttribute Referencia in listaProductos)

@@ -131,10 +131,24 @@ namespace PerfumeriaRaul.Pages
         private void Button_ClickBorrar(object sender, RoutedEventArgs e)
         {
             Producto product = (Producto)myDataGrid.SelectedItem;
-            XMLHandler.RemoveProducto(product);
-            RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
-            LocalImageDBHandler.RemoveDataFrom(product.Referencia);
-            UpdateProductList();
+            
+            MessageBoxResult resultado = MessageBox.Show("¿Desea Borrarlo Realmente?", "Borrar", MessageBoxButton.YesNo, MessageBoxImage.Information);
+
+            switch (resultado)
+            {
+                case MessageBoxResult.Yes:
+                    XMLHandler.RemoveProducto(product);
+                    RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
+                    LocalImageDBHandler.RemoveDataFrom(product.Referencia);
+                    UpdateProductList();
+
+
+                    break;
+                case MessageBoxResult.No:
+                    break;
+
+
+            }
         }
         private void Button_ClickPublicar(object sender, RoutedEventArgs e)
         {
@@ -142,15 +156,44 @@ namespace PerfumeriaRaul.Pages
             if(product.publish == false)
             {
                 //RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
-                RemoteProductsDBHandler.AddData_toDB(product);
-                product.publish = true;
                 
+                MessageBoxResult resultado = MessageBox.Show("¿Desea Publicarlo Realmente?", "Publicar", MessageBoxButton.YesNo, MessageBoxImage.Information);
+
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        RemoteProductsDBHandler.AddData_toDB(product);
+                        product.publish = true;
+
+
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+
+
+                }
+
+
             }
             else
             {
+                MessageBoxResult resultado = MessageBox.Show("¿Desea Despublicarlo Realmente?", "Despublicar", MessageBoxButton.YesNo, MessageBoxImage.Information);
 
-                RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
-                product.publish = false;
+                switch (resultado)
+                {
+                    case MessageBoxResult.Yes:
+                        RemoteProductsDBHandler.DeleteToProjectDB(product.Referencia);
+                        product.publish = false;
+
+
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+
+
+                }
+
+                
                
             }
             XMLHandler.editarProducto(product);

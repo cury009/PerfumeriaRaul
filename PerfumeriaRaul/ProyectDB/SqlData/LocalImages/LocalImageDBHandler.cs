@@ -13,10 +13,19 @@ namespace PerfumeriaRaul.ProyectDB.SqlData.LocalImages
         private static ImagesTableAdapter imageAdapter = new ImagesTableAdapter();
         private static DataSet_Local_Images dataSet = new DataSet_Local_Images();
 
-        public static void AddData_toDB(String idImage, byte[] productImage)
+        public static bool AddData_toDB(String idImage, byte[] productImage)
         {
-            imageAdapter.Insert(idImage, productImage);
-            imageAdapter.Update(dataSet);
+            try
+            {
+                imageAdapter.Insert(idImage, productImage);
+                imageAdapter.Update(dataSet);
+                return false;
+            }
+            catch
+            {
+                return true;
+            }
+            
 
         }
         
