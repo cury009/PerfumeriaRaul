@@ -248,7 +248,7 @@ namespace PerfumeriaRaul.Pages
 
         private void txtReferencia_LostFocus(object sender, RoutedEventArgs e)
         {
-            if(XMLHandler.ExistsRef("txtReferencia.Text"))
+            if(XMLHandler.ExistsRef(txtReferencia.Text))
             {
                 MessageBox.Show("La Referencia existe");
                 txtReferencia.Text="";

@@ -125,7 +125,7 @@ namespace PerfumeriaRaul.Pages
         private void Button_ClickModificar(object sender, RoutedEventArgs e)
         {
             Producto product = (Producto)myDataGrid.SelectedItem;
-            MainWindow.myNavigationFrame.NavigationService.Navigate(new NewOrModifyProducto("Modificar usuario", ProductoHandler, product));
+            MainWindow.myNavigationFrame.NavigationService.Navigate(new NewOrModifyProducto("Modificar producto", ProductoHandler, product));
         }
 
         private void Button_ClickBorrar(object sender, RoutedEventArgs e)

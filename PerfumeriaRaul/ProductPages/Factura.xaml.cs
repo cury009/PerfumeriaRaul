@@ -76,20 +76,22 @@ namespace PerfumeriaRaul.ProductPages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (listaProductosF.Count > 0 && txt_nFactura.Text != "" && cliente != null)
+            
+            if (listaProductosF.Count > 0 && txb_nFactura.Text != "" && cliente != null)
             {
-                FacturaDBHandler.AddClient(cliente);
-                bool okFactura = FacturaDBHandler.AddFactura(cliente, listaProductosF, txt_nFactura.Text);
+                Cliente nuevocliente = new Cliente(txb_cif.Text, txb_nombre.Text, txb_direccion.Text);
+                FacturaDBHandler.AddClient(nuevocliente);
+                FacturaDBHandler.AddFactura(nuevocliente, listaProductosF, txb_nFactura.Text);
 
 
-                if (okFactura)
-                {
-                    MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
+                //if (okFactura)
+                //{
+                   // MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
                     ReportPreview report = new ReportPreview();
-                    string factura = txt_nFactura.Text;
-                    if (txt_nFactura.Text != "")
-                    {
-                        bool okConsulta = report.GetCrearFactura(factura);
+                    //string factura = txb_nFactura.Text;
+                    //if (txt_nFactura.Text != "")
+                    //{
+                         bool okConsulta = report.GetCrearFactura(txb_nFactura.Text);
                         if (okConsulta)
                         {
                             report.Show();
@@ -98,18 +100,19 @@ namespace PerfumeriaRaul.ProductPages
                         {
                             System.Windows.MessageBox.Show("no se ha encontrado el registro por factura");
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("no se ha  podido cargar la factura");
-                    }
+                    //}
+                    //else
+                    //{
+                       // MessageBox.Show("no se ha  podido cargar la factura");
+                    //}
 
 
-                }
-                else
-                {
-                    System.Windows.MessageBox.Show("es necesario insertar por una factura");
-                }
+                //}
+                //else
+                //{
+                    //MessageBox.Show("NO ENTRA EN EL IF DE OKFACTURA");
+                //}
+                
             }
         }
     }

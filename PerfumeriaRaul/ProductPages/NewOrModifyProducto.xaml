@@ -20,7 +20,7 @@
                 <RowDefinition Height="325*"/>
                 <RowDefinition Height="114*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="nuevoProducto"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="NUEVO PRODUCTO" HorizontalAlignment="Center" Margin="342,12,297,7" FontSize="22" FontWeight="Bold" Width="243" Foreground="#FFD787" FontFamily="Perpetua Titling Mt" RenderTransformOrigin="0.5,0.5">
+            <TextBlock x:Name="nuevoProducto"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="NUEVO PRODUCTO" HorizontalAlignment="Center" Margin="289,12,297,7" FontSize="22" FontWeight="Bold" Width="296" Foreground="#FFD787" FontFamily="Perpetua Titling Mt" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

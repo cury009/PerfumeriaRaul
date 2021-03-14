@@ -11,15 +11,15 @@
     <StackPanel Background="{StaticResource backgroundMain}">
         <TextBlock Text="CREAR FACTURA" Margin="10" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
         <TextBlock Text="Nº FACTURA" HorizontalAlignment="Center" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
-        <TextBox x:Name="txt_nFactura" Width="200"  FontFamily="Perpetua Titling Mt"/>
+        <TextBox x:Name="txb_nFactura" Width="200"  FontFamily="Perpetua Titling Mt"/>
         <TextBlock Text="DATOS DEL CLIENTE" HorizontalAlignment="Center" Margin="10" Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
         <WrapPanel x:Name="datosCliente" HorizontalAlignment="Center">
             <TextBlock Text="CIF: " Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
-            <TextBox Width="150" Text="{Binding Path=cif}"/>
+            <TextBox Width="150" Text="{Binding Path=cif}" x:Name="txb_cif"/>
             <TextBlock Text="NOMBRE: " Foreground="#FFD787" FontFamily="Perpetua Titling Mt" />
-            <TextBox Width="200" Text="{Binding Path=nombre}"/>
+            <TextBox Width="200" Text="{Binding Path=nombre}" x:Name="txb_nombre"/>
             <TextBlock Text="DIRECCION: " Foreground="#FFD787" FontFamily="Perpetua Titling Mt"/>
-            <TextBox Width="250" Text="{Binding Path=direccion}" />
+                <TextBox Width="250" Text="{Binding Path=direccion}" x:Name="txb_direccion" />
         </WrapPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
             <TextBox x:Name="txt_cantidad" Text="{Binding Path=Cantidad}" Width="60" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
