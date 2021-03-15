@@ -11,6 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -66,7 +67,7 @@ namespace PerfumeriaRaul
 
         private void Button_ClickSalir(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult resultado=  MessageBox.Show("¿Desea Salir Realmente?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Information);          
+            MessageBoxResult resultado= System.Windows.MessageBox.Show("¿Desea Salir Realmente?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Information);          
                    
             switch (resultado)
             {
@@ -92,6 +93,11 @@ namespace PerfumeriaRaul
         private void Button_ClickInforme(object sender, RoutedEventArgs e)
         {
             myNavigationFrame.NavigationService.Navigate(new MenuInformes(productHandler));
+        }
+
+        private void Button_ClickAyuda(object sender, RoutedEventArgs e)
+        {
+            Help.ShowHelp(null, "Helpfiles/Help.chm");
         }
     }
 }

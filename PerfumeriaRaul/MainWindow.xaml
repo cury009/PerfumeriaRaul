@@ -5,22 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PerfumeriaRaul"
         mc:Ignorable="d"
-        Title="MainWindow" Height="630" Width="850">
+        Title="Perfume Mercadona" Height="630" Width="850">
 
 
     <StackPanel Background="{StaticResource backgroundMain}">
         <StackPanel.Resources>
-            
+
             <Style TargetType="Button" BasedOn="{StaticResource menu}"/>
-            
+
         </StackPanel.Resources>
-        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Width="600" Margin="20" >
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Width="710" Margin="61,20,71,20" >
             <Button Content="PRINCIPAL" Click="Button_ClickPrincipal" Margin="0,0,10,0" Width="100" />
 
             <Button Content="NUEVO" Click="Button_ClickNuevo" Margin="0,0,10,0" Width="100"/>
             <Button Content="BUSCAR EN TABLA" Click="Button_ClickBuscarTabla" Margin="0,0,10,0"  Width="161"/>
             <!--<Button Content="CONSULTA PRODUCTO" Click="Button_ClickConsultaProducto" Margin="0,8,0,7" Width="159"/>-->
             <Button Content="INFORME" Click="Button_ClickInforme" Margin="0,0,10,0" Width="100"/>
+            <Button Content="AYUDA" Click="Button_ClickAyuda" Margin="0,0,10,0" Width="100"/>
             <Button Content="SALIR" Click="Button_ClickSalir"  Margin="0,0,10,0" Width="100"  />
         </StackPanel>
 

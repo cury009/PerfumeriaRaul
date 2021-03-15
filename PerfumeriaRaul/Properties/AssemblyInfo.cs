@@ -8,12 +8,12 @@ using System.Windows;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("PerfumeriaRaul")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Gestion y publicación de productos")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("RaulGradoSuperior")]
 [assembly: AssemblyProduct("PerfumeriaRaul")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright RaulGradoSuperior ©  2021")]
+[assembly: AssemblyTrademark("RaulGradoSuperior")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 

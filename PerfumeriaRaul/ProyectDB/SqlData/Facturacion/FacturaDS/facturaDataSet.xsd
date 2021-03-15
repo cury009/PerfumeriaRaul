@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="facturaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="facturaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PerfumeriaRaul.Properties.Settings.GlobalReference.Default.facturaConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="facturaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="facturaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PerfumeriaRaul.Properties.Settings.GlobalReference.Default.facturaConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clienteTableAdapter" GeneratorDataComponentClassName="clienteTableAdapter" Name="cliente" UserDataComponentName="clienteTableAdapter">
@@ -194,7 +194,7 @@ SELECT refProducto, refFactura1, cantidad, precio, descripcion FROM producto_fac
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="informesTableAdapter" GeneratorDataComponentClassName="informesTableAdapter" Name="informes" UserDataComponentName="informesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        cliente.cif, cliente.nombre, cliente.direccion, factura.refFactura, factura.fecha, producto_factura.refProducto, producto_factura.cantidad, producto_factura.precio, producto_factura.descripcion
@@ -218,7 +218,7 @@ FROM            cliente INNER JOIN
               <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCIF" GetMethodModifier="Public" GetMethodName="GetDataByCIF" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCIF" UserSourceName="GetDataByCIF">
+              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCIF" GetMethodModifier="Public" GetMethodName="GetDataByCIF" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCIF" UserSourceName="GetDataByCIF">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        cliente.cif, cliente.nombre, cliente.direccion, factura.refFactura, factura.fecha, producto_factura.refProducto, producto_factura.cantidad, producto_factura.precio, producto_factura.descripcion
@@ -232,7 +232,7 @@ WHERE        (cliente.cif = @cif)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFecha" GetMethodModifier="Public" GetMethodName="GetDataByFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFecha" UserSourceName="GetDataByFecha">
+              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFecha" GetMethodModifier="Public" GetMethodName="GetDataByFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFecha" UserSourceName="GetDataByFecha">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        cliente.cif, cliente.nombre, cliente.direccion, factura.refFactura, factura.fecha, producto_factura.refProducto, producto_factura.cantidad, producto_factura.precio, producto_factura.descripcion
@@ -247,7 +247,7 @@ WHERE        (factura.fecha BETWEEN @fecha1 AND @fecha2)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRefFacturas" GetMethodModifier="Public" GetMethodName="GetDataByRefFacturas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRefFacturas" UserSourceName="GetDataByRefFacturas">
+              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRefFacturas" GetMethodModifier="Public" GetMethodName="GetDataByRefFacturas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRefFacturas" UserSourceName="GetDataByRefFacturas">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        cliente.cif, cliente.nombre, cliente.direccion, factura.refFactura, factura.fecha, producto_factura.refProducto, producto_factura.cantidad, producto_factura.precio, producto_factura.descripcion
@@ -265,7 +265,7 @@ WHERE        (factura.refFactura = @refFactura)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="fechasFacturasTableAdapter" GeneratorDataComponentClassName="fechasFacturasTableAdapter" Name="fechasFacturas" UserDataComponentName="fechasFacturasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetFacturasFechas" GetMethodModifier="Public" GetMethodName="GetFacturasFechas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetFacturasFechas" UserSourceName="GetFacturasFechas">
+              <DbSource ConnectionRef="facturaConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetFacturasFechas" GetMethodModifier="Public" GetMethodName="GetFacturasFechas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetFacturasFechas" UserSourceName="GetFacturasFechas">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        cliente.cif, cliente.nombre, cliente.direccion, factura.refFactura, factura.fecha
@@ -297,7 +297,7 @@ WHERE        (factura.fecha BETWEEN @fecha1 AND @fecha2)</CommandText>
   <xs:element name="facturaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="facturaDataSet" msprop:Generator_UserDSName="facturaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_RowClassName="clienteRow" msprop:Generator_UserTableName="cliente" msprop:Generator_RowEvArgName="clienteRowChangeEvent">
+        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_UserTableName="cliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_RowEvArgName="clienteRowChangeEvent" msprop:Generator_RowClassName="clienteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cif" msprop:Generator_ColumnVarNameInTable="columncif" msprop:Generator_ColumnPropNameInRow="cif" msprop:Generator_ColumnPropNameInTable="cifColumn" msprop:Generator_UserColumnName="cif">
@@ -324,7 +324,7 @@ WHERE        (factura.fecha BETWEEN @fecha1 AND @fecha2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="factura" msprop:Generator_TableClassName="facturaDataTable" msprop:Generator_TableVarName="tablefactura" msprop:Generator_RowChangedName="facturaRowChanged" msprop:Generator_TablePropName="factura" msprop:Generator_RowDeletingName="facturaRowDeleting" msprop:Generator_RowChangingName="facturaRowChanging" msprop:Generator_RowEvHandlerName="facturaRowChangeEventHandler" msprop:Generator_RowDeletedName="facturaRowDeleted" msprop:Generator_RowClassName="facturaRow" msprop:Generator_UserTableName="factura" msprop:Generator_RowEvArgName="facturaRowChangeEvent">
+        <xs:element name="factura" msprop:Generator_TableClassName="facturaDataTable" msprop:Generator_TableVarName="tablefactura" msprop:Generator_TablePropName="factura" msprop:Generator_RowDeletingName="facturaRowDeleting" msprop:Generator_RowChangingName="facturaRowChanging" msprop:Generator_RowEvHandlerName="facturaRowChangeEventHandler" msprop:Generator_RowDeletedName="facturaRowDeleted" msprop:Generator_UserTableName="factura" msprop:Generator_RowChangedName="facturaRowChanged" msprop:Generator_RowEvArgName="facturaRowChangeEvent" msprop:Generator_RowClassName="facturaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="refFactura" msprop:Generator_ColumnVarNameInTable="columnrefFactura" msprop:Generator_ColumnPropNameInRow="refFactura" msprop:Generator_ColumnPropNameInTable="refFacturaColumn" msprop:Generator_UserColumnName="refFactura">
@@ -345,7 +345,7 @@ WHERE        (factura.fecha BETWEEN @fecha1 AND @fecha2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="producto_factura" msprop:Generator_TableClassName="producto_facturaDataTable" msprop:Generator_TableVarName="tableproducto_factura" msprop:Generator_RowChangedName="producto_facturaRowChanged" msprop:Generator_TablePropName="producto_factura" msprop:Generator_RowDeletingName="producto_facturaRowDeleting" msprop:Generator_RowChangingName="producto_facturaRowChanging" msprop:Generator_RowEvHandlerName="producto_facturaRowChangeEventHandler" msprop:Generator_RowDeletedName="producto_facturaRowDeleted" msprop:Generator_RowClassName="producto_facturaRow" msprop:Generator_UserTableName="producto_factura" msprop:Generator_RowEvArgName="producto_facturaRowChangeEvent">
+        <xs:element name="producto_factura" msprop:Generator_TableClassName="producto_facturaDataTable" msprop:Generator_TableVarName="tableproducto_factura" msprop:Generator_TablePropName="producto_factura" msprop:Generator_RowDeletingName="producto_facturaRowDeleting" msprop:Generator_RowChangingName="producto_facturaRowChanging" msprop:Generator_RowEvHandlerName="producto_facturaRowChangeEventHandler" msprop:Generator_RowDeletedName="producto_facturaRowDeleted" msprop:Generator_UserTableName="producto_factura" msprop:Generator_RowChangedName="producto_facturaRowChanged" msprop:Generator_RowEvArgName="producto_facturaRowChangeEvent" msprop:Generator_RowClassName="producto_facturaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="refProducto" msprop:Generator_ColumnVarNameInTable="columnrefProducto" msprop:Generator_ColumnPropNameInRow="refProducto" msprop:Generator_ColumnPropNameInTable="refProductoColumn" msprop:Generator_UserColumnName="refProducto">
@@ -374,7 +374,7 @@ WHERE        (factura.fecha BETWEEN @fecha1 AND @fecha2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="informes" msprop:Generator_TableClassName="informesDataTable" msprop:Generator_TableVarName="tableinformes" msprop:Generator_TablePropName="informes" msprop:Generator_RowDeletingName="informesRowDeleting" msprop:Generator_RowChangingName="informesRowChanging" msprop:Generator_RowEvHandlerName="informesRowChangeEventHandler" msprop:Generator_RowDeletedName="informesRowDeleted" msprop:Generator_UserTableName="informes" msprop:Generator_RowChangedName="informesRowChanged" msprop:Generator_RowEvArgName="informesRowChangeEvent" msprop:Generator_RowClassName="informesRow">
+        <xs:element name="informes" msprop:Generator_TableClassName="informesDataTable" msprop:Generator_TableVarName="tableinformes" msprop:Generator_RowChangedName="informesRowChanged" msprop:Generator_TablePropName="informes" msprop:Generator_RowDeletingName="informesRowDeleting" msprop:Generator_RowChangingName="informesRowChanging" msprop:Generator_RowEvHandlerName="informesRowChangeEventHandler" msprop:Generator_RowDeletedName="informesRowDeleted" msprop:Generator_RowClassName="informesRow" msprop:Generator_UserTableName="informes" msprop:Generator_RowEvArgName="informesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cif" msprop:Generator_ColumnVarNameInTable="columncif" msprop:Generator_ColumnPropNameInRow="cif" msprop:Generator_ColumnPropNameInTable="cifColumn" msprop:Generator_UserColumnName="cif">
@@ -425,7 +425,7 @@ WHERE        (factura.fecha BETWEEN @fecha1 AND @fecha2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="fechasFacturas" msprop:Generator_TableClassName="fechasFacturasDataTable" msprop:Generator_TableVarName="tablefechasFacturas" msprop:Generator_TablePropName="fechasFacturas" msprop:Generator_RowDeletingName="fechasFacturasRowDeleting" msprop:Generator_RowChangingName="fechasFacturasRowChanging" msprop:Generator_RowEvHandlerName="fechasFacturasRowChangeEventHandler" msprop:Generator_RowDeletedName="fechasFacturasRowDeleted" msprop:Generator_UserTableName="fechasFacturas" msprop:Generator_RowChangedName="fechasFacturasRowChanged" msprop:Generator_RowEvArgName="fechasFacturasRowChangeEvent" msprop:Generator_RowClassName="fechasFacturasRow">
+        <xs:element name="fechasFacturas" msprop:Generator_TableClassName="fechasFacturasDataTable" msprop:Generator_TableVarName="tablefechasFacturas" msprop:Generator_RowChangedName="fechasFacturasRowChanged" msprop:Generator_TablePropName="fechasFacturas" msprop:Generator_RowDeletingName="fechasFacturasRowDeleting" msprop:Generator_RowChangingName="fechasFacturasRowChanging" msprop:Generator_RowEvHandlerName="fechasFacturasRowChangeEventHandler" msprop:Generator_RowDeletedName="fechasFacturasRowDeleted" msprop:Generator_RowClassName="fechasFacturasRow" msprop:Generator_UserTableName="fechasFacturas" msprop:Generator_RowEvArgName="fechasFacturasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cif" msprop:Generator_ColumnVarNameInTable="columncif" msprop:Generator_ColumnPropNameInRow="cif" msprop:Generator_ColumnPropNameInTable="cifColumn" msprop:Generator_UserColumnName="cif">
@@ -482,10 +482,10 @@ WHERE        (factura.fecha BETWEEN @fecha1 AND @fecha2)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_factura_ToTable" msdata:parent="cliente" msdata:child="factura" msdata:parentkey="cif" msdata:childkey="cif1" msprop:Generator_UserChildTable="factura" msprop:Generator_ChildPropName="GetfacturaRows" msprop:Generator_UserRelationName="FK_factura_ToTable" msprop:Generator_RelationVarName="relationFK_factura_ToTable" msprop:Generator_UserParentTable="cliente" msprop:Generator_ParentPropName="clienteRow" />
-      <msdata:Relationship name="FK_producto_factura_ToTable" msdata:parent="factura" msdata:child="producto_factura" msdata:parentkey="refFactura" msdata:childkey="refFactura1" msprop:Generator_UserChildTable="producto_factura" msprop:Generator_ChildPropName="Getproducto_facturaRows" msprop:Generator_UserRelationName="FK_producto_factura_ToTable" msprop:Generator_RelationVarName="relationFK_producto_factura_ToTable" msprop:Generator_UserParentTable="factura" msprop:Generator_ParentPropName="facturaRow" />
-      <msdata:Relationship name="FK_factura_ToTable1" msdata:parent="informes" msdata:child="factura" msdata:parentkey="cif" msdata:childkey="cif1" msprop:Generator_UserChildTable="factura" msprop:Generator_ChildPropName="GetfacturaRows" msprop:Generator_UserRelationName="FK_factura_ToTable1" msprop:Generator_RelationVarName="relationFK_factura_ToTable1" msprop:Generator_UserParentTable="informes" msprop:Generator_ParentPropName="informesRow" />
-      <msdata:Relationship name="FK_factura_ToTable2" msdata:parent="fechasFacturas" msdata:child="factura" msdata:parentkey="cif" msdata:childkey="cif1" msprop:Generator_UserChildTable="factura" msprop:Generator_ChildPropName="GetfacturaRows" msprop:Generator_UserRelationName="FK_factura_ToTable2" msprop:Generator_RelationVarName="relationFK_factura_ToTable2" msprop:Generator_UserParentTable="fechasFacturas" msprop:Generator_ParentPropName="fechasFacturasRow" />
+      <msdata:Relationship name="FK_factura_ToTable" msdata:parent="cliente" msdata:child="factura" msdata:parentkey="cif" msdata:childkey="cif1" msprop:Generator_UserChildTable="factura" msprop:Generator_ChildPropName="GetfacturaRows" msprop:Generator_UserRelationName="FK_factura_ToTable" msprop:Generator_ParentPropName="clienteRow" msprop:Generator_RelationVarName="relationFK_factura_ToTable" msprop:Generator_UserParentTable="cliente" />
+      <msdata:Relationship name="FK_producto_factura_ToTable" msdata:parent="factura" msdata:child="producto_factura" msdata:parentkey="refFactura" msdata:childkey="refFactura1" msprop:Generator_UserChildTable="producto_factura" msprop:Generator_ChildPropName="Getproducto_facturaRows" msprop:Generator_UserRelationName="FK_producto_factura_ToTable" msprop:Generator_ParentPropName="facturaRow" msprop:Generator_RelationVarName="relationFK_producto_factura_ToTable" msprop:Generator_UserParentTable="factura" />
+      <msdata:Relationship name="FK_factura_ToTable1" msdata:parent="informes" msdata:child="factura" msdata:parentkey="cif" msdata:childkey="cif1" msprop:Generator_UserChildTable="factura" msprop:Generator_ChildPropName="GetfacturaRows" msprop:Generator_UserRelationName="FK_factura_ToTable1" msprop:Generator_ParentPropName="informesRow" msprop:Generator_RelationVarName="relationFK_factura_ToTable1" msprop:Generator_UserParentTable="informes" />
+      <msdata:Relationship name="FK_factura_ToTable2" msdata:parent="fechasFacturas" msdata:child="factura" msdata:parentkey="cif" msdata:childkey="cif1" msprop:Generator_UserChildTable="factura" msprop:Generator_ChildPropName="GetfacturaRows" msprop:Generator_UserRelationName="FK_factura_ToTable2" msprop:Generator_ParentPropName="fechasFacturasRow" msprop:Generator_RelationVarName="relationFK_factura_ToTable2" msprop:Generator_UserParentTable="fechasFacturas" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

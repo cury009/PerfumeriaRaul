@@ -27,7 +27,8 @@ namespace PerfumeriaRaul.Pages
     /// </summary>
     public partial class NewOrModifyProducto : Page
     {
-        private XDocument xml = XDocument.Load("../../XML/XMLproductos.xml");
+        //private XDocument xml = XDocument.Load("../../XML/XMLproductos.xml");
+        private XDocument xml = XMLHandler.ReturnXDocument();
         public ProductHandler productoHandler;
         public Producto producto;
         public bool verify;

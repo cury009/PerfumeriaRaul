@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,21 @@ namespace PerfumeriaRaul.xml
         private static XElement xmlCategoria;
         private static XElement xmlModelo;
 
-        private static void LoadXML() { xml = XDocument.Load("../../XML/XMLproductos.xml"); }
-        private static void saveXML()
+        private static string XMLpath = Environment.CurrentDirectory;
+        private static string XMLname = "XML/XMLproductos.xml";
+        private static string documentoXML = Path.Combine(XMLpath, XMLname);
+
+        private static void LoadXML() { xml = XDocument.Load(documentoXML); }
+        public static XDocument ReturnXDocument()
+        {
+            return XDocument.Load(documentoXML);
+        }
+        private static void saveXML() { xml.Save(documentoXML); }
+        //private static void LoadXML() { xml = XDocument.Load("../../XML/XMLproductos.xml"); }
+        /*private static void saveXML()
         {
             xml.Save("../../XML/XMLproductos.xml");
-        }
+        }*/
 
         public static bool ExistsRef (string Referencia)
         {
