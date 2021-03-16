@@ -23,6 +23,10 @@ namespace PerfumeriaRaul.Reporting
     /// </summary>
     public partial class ReportPreview : Window
     {
+        private static string Currentpath = Environment.CurrentDirectory;
+        private static string reportRef = "../../Informes/CrearFactura.rdlc";
+        private static string reportCif = "../../Informes/ConsultaCIFinforme.rdlc";
+        private static string reportFechas = "../../Informes/InformeFechas.rdlc";
         public ReportPreview()
         {
             InitializeComponent();
@@ -34,7 +38,7 @@ namespace PerfumeriaRaul.Reporting
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DatosConsultaCIF";
             rds.Value = tablaInforme;
-            myReportView.LocalReport.ReportPath = "../../Informes/ConsultaCIFinforme.rdlc";
+            myReportView.LocalReport.ReportPath = System.IO.Path.Combine(Currentpath, reportCif);
             myReportView.LocalReport.DataSources.Add(rds);
             myReportView.RefreshReport();
             if (tablaInforme.Rows.Count > 0)
@@ -52,7 +56,7 @@ namespace PerfumeriaRaul.Reporting
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DatosFactura";
             rds.Value = tablaInforme;
-            myReportView.LocalReport.ReportPath = "../../informes/CrearFactura.rdlc";
+            myReportView.LocalReport.ReportPath = System.IO.Path.Combine(Currentpath, reportRef);
             myReportView.LocalReport.DataSources.Add(rds);
             myReportView.RefreshReport();
             if (tablaInforme.Rows.Count > 0)
@@ -69,7 +73,7 @@ namespace PerfumeriaRaul.Reporting
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DatosFechas";
             rds.Value = informe;
-            myReportView.LocalReport.ReportPath = "../../Informes/InformeFechas.rdlc";
+            myReportView.LocalReport.ReportPath = System.IO.Path.Combine(Currentpath, reportFechas);
             myReportView.LocalReport.DataSources.Add(rds);
             myReportView.RefreshReport();
 

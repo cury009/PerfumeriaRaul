@@ -28,7 +28,8 @@ namespace PerfumeriaRaul.Pages
     public partial class ProductoGrid : Page
     {
         ProductHandler ProductoHandler;
-        private XDocument xml = XDocument.Load("../../XML/XMLproductos.xml");
+        //XDocument.Load("../../XML/XMLproductos.xml");
+        private XDocument xml = XMLHandler.ReturnXDocument();
         ObservableCollection<Producto> filterList;
 
         public ProductoGrid(ProductHandler productHandler)

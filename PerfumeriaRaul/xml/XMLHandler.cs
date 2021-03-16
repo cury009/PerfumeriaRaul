@@ -37,7 +37,7 @@ namespace PerfumeriaRaul.xml
         {
             LoadXML();
             bool existsRef = false;
-            foreach (var ReferenciaXML in xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo").Attributes())
+            foreach (var ReferenciaXML in xml.Root.Elements("Tipo").Elements("Marca").Elements("Articulo").Attributes("Referencia"))
             {
                 if(ReferenciaXML.Value == Referencia)
                 {

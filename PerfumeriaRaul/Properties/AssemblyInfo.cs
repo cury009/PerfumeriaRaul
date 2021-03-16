@@ -13,7 +13,7 @@ using System.Windows;
 [assembly: AssemblyCompany("RaulGradoSuperior")]
 [assembly: AssemblyProduct("PerfumeriaRaul")]
 [assembly: AssemblyCopyright("Copyright RaulGradoSuperior ©  2021")]
-[assembly: AssemblyTrademark("RaulGradoSuperior")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
